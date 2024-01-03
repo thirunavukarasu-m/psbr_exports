@@ -16,6 +16,7 @@ function App() {
         <MainNavbar/>
         <Routes>
           <Route path="/" Component={HomePage} />
+          <Route path="/products" Component={ProductsPage} />
           <Route path="/about" Component={AboutUsPage} />
           <Route path="/contact-us" Component={ContactUsPage} />
           <Route path="/products" Component={ProductsPage} />

@@ -1,12 +1,13 @@
 import React from 'react'
 import './SingleProductInfo.css'
 
-const SingleProductInfo = () => {
+const SingleProductInfo = ({product}) => {
+    console.log(product);
     return (
         <>
-            <div className="single-product-view-container p-5">
-                <div className="product-img p-5">
-                    <img src="" alt="" />
+            <div className="single-product-view-container pt-5">
+                <div className="product-img">
+                    <img src={product} alt="" />
                 </div>
                 <div className="product-info">
                     <h2>
