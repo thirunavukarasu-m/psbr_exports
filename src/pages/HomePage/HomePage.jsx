@@ -52,11 +52,17 @@ const HomePage = () => {
       img: turmaric
     },
   ]
+  const psbr_exports = {
+    img: ship,
+    heading: "PSBR Exports",
+    para_one: "JVR Exports is one of the leading suppliers and exporters of quality products from India. We strive to provide our customers with superior products and reliable services that help them in their business growth and success. Our team of experienced specialists are committed to providing solutions that meet all of our customers’ needs, from sourcing the best products to delivering them on time and with committed accuracy.",
+    para_two: "With our in depth knowledge and expertise in the quality products sourcing and in the International trade, we are confident that we can make a difference and help our customers to grow and succeed."
+  }
   return (
     <>
       <Banner />
       <h1 className='text-center pt-5'> Who we are</h1>
-      <SingleProductInfo product={ship} />
+      <SingleProductInfo product={psbr_exports} />
       <h2 className='text-center pt-5'> Explore </h2>
       <h1 className='text-center pt-4'> Our Products </h1>
       <div className="products-card-container d-flex pt-4 mb-5">
