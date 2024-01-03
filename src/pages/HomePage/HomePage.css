@@ -1,0 +1,7 @@
+.products-card-container {
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 6rem;
+    justify-content: center;
+    margin: 0 auto;
+}
