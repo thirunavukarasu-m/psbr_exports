@@ -1,0 +1,54 @@
+.about-us-banner {
+    background: url("../../assets/about-us-ship.jpg");
+    filter: blur(0.5px);
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.mv-container {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.mv-content {
+    max-width: 550px;
+    min-width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+.why-choose-us-container {
+    color: white;
+}
+.why-choose-us-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.why-choose-us-card {
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.03);
+    }
+}

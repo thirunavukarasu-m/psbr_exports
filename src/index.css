@@ -38,3 +38,12 @@ a {
 .pb-5 {
   padding-bottom: 150px!important;
 }
+
+
+.font-5 {
+  font-size: 5rem;
+}
+
+.bg-dark-blue {
+  background-color: #004A8D;
+}

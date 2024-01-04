@@ -2,19 +2,15 @@ import React, { useEffect } from 'react'
 import './ModalPopup.css'
 const ModalPopup = () => {
     useEffect(() => {
-        // Check if it's the first visit by looking at local storage
         const isFirstVisit = localStorage.getItem('isFirstVisit');
 
         if (!isFirstVisit) {
-            // If it's the first visit, show the modal after 5 seconds
             const timeoutId = setTimeout(() => {
                 const modal = new window.bootstrap.Modal(document.getElementById('exampleModal'));
                 modal.show();
-                // Set a flag in local storage to indicate that the modal has been shown
                 localStorage.setItem('isFirstVisit', 'true');
-            }, 5000);
+            }, 3000);
 
-            // Clean up the timeout to prevent memory leaks
             return () => clearTimeout(timeoutId);
         }
     }, []);
