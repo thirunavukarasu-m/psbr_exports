@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/psbr_logo.jpeg"
+import logo from "../../assets/psbr_bg_removed.png"
 import facebook from "../../assets/social-icons/facebook.png"
 import youtube from "../../assets/social-icons/youtube.png"
 import threads from "../../assets/social-icons/threads.png"
@@ -11,7 +11,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <>
-      <div className="footer-container p-5 d-flex justify-content-center align-items-start">
+      <div className="footer-container p-4 d-flex justify-content-center align-items-start ">
         <div className="footer-contact-info d-flex justify-content-center align-items-center flex-column">
           <img src={logo} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
           <div className="d-flex justify-content-center align-items-center social-icons pt-3">
@@ -21,12 +21,12 @@ const Footer = () => {
             <img src={instagram} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
             <img src={linkedIn} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
           </div>
-          <p className='m-0 fw-bold pt-2'>Phone: +91 6381693069</p>
-          <p className='m-0 fw-bold pt-2'>Email: info@psbrexports.com</p>
+          <p className='m-0 fw-bold pt-2 text-dark'>Phone: +91 6381693069</p>
+          <p className='m-0 fw-bold pt-2 text-dark'>Email: info@psbrexports.com</p>
 
         </div>
         <div className="quick-links-footer-container">
-          <h1 className='fw-bold'>
+          <h1 className='fw-bold orange-text fs-1'>
             Quick Links
           </h1>
           <div className="quick-links-footer d-flex flex-column justify-content-center align-items-start">
@@ -34,11 +34,10 @@ const Footer = () => {
             <Link to="/about">About Us</Link>
             <Link to="/contact-us">Contact Us</Link>
             <Link to="/products">Our Products</Link>
-
           </div>
         </div>
         <div className="our-products-footer-container">
-          <h1 className='fw-bold'>
+          <h1 className='fw-bold orange-text fs-1'>
             Our Products
           </h1>
           <div className="our-products-footer d-flex justify-content-center align-items-start">

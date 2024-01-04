@@ -60,22 +60,24 @@ const HomePage = () => {
   }
   return (
     <>
-      <Banner />
-      <h1 className='text-center pt-5'> Who we are</h1>
-      <SingleProductInfo product={psbr_exports} />
-      <h2 className='text-center pt-5'> Explore </h2>
-      <h1 className='text-center pt-4'> Our Products </h1>
-      <div className="products-card-container d-flex pt-4 mb-5">
-        {
-          products.map((product)=>{
-            return(
-              <>
-                <ProductCard product={product}/>
-              </>
-            )
-          })
-        }
-      </div>
+
+        <Banner />
+        <h1 className='text-center pt-5 orange-color orange-text'> Who we are</h1>
+        <SingleProductInfo product={psbr_exports} />
+        <h2 className='text-center pt-5 orange-text'> Explore </h2>
+        <h1 className='text-center pt-4 orange-text'> Our Products </h1>
+        <div className="products-card-container d-flex pt-4 mb-5">
+          {
+            products.map((product) => {
+              return (
+                <>
+                  <ProductCard product={product} />
+                </>
+              )
+            })
+          }
+        </div>
+    
     </>
   )
 }

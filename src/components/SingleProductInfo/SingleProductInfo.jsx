@@ -9,7 +9,7 @@ const SingleProductInfo = ({product,index}) => {
                     <img src={product.img} alt="" />
                 </div>
                 <div className="product-info">
-                    <h2>
+                    <h2 className='orange-text'>
                         {product.heading}
                     </h2>
                     <p>

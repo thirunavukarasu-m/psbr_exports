@@ -1,8 +1,8 @@
 .product-card {
-    height: 300px; /* Adjust the height value as needed */
-    /* overflow: hidden; */
+    height: 300px;
     width: 350px;
     cursor: pointer;
+    
 }
 
 .product-card > img {
@@ -12,4 +12,10 @@
     display: block;
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+    }
 }
