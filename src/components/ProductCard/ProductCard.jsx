@@ -6,7 +6,12 @@ import SkeletonLoader from '../SkeletonLoader/SkeletonLoader'
 const ProductCard = ({ product }) => {
     const [showSkeleton, setShowSkeleton] = useState(true);
     const [showImage, setShowImage] = useState(false);
-
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth', 
+        });
+      };
     useEffect(() => {
         const imageAlreadyLoaded = sessionStorage.getItem('imageInHomeLoaded');
         if (imageAlreadyLoaded) {
@@ -29,7 +34,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <>
-            <Link to="/products">
+            <Link to="/products" onClick={scrollToTop}>
                 {showSkeleton && <SkeletonLoader height={300} width={350} />}
 
                 {showImage && (

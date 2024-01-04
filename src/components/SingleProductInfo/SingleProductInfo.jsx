@@ -28,18 +28,18 @@ const SingleProductInfo = ({product,index,page}) => {
     return (
         <>
             <div className={index % 2 !== 0 ? "single-product-view-container pt-5": "single-product-view-container pt-5 flex-row-reverse"}>
-                <div className="product-img">
+                <div className="product-img" >
                     {showSkeleton && <SkeletonLoader height={400} width={300}/>}
                     {showImage && <img src={product.img} alt="" />}
                 </div>
                 <div className="product-info">
-                    <h2 className={page ? 'text-white fs-1 pb-3': 'blue-text fs-1 pb-3'}>
+                    <h2 className={page ? 'text-white fs-1 pb-3 fw-bold': 'blue-text fs-1 pb-3 fw-bold'} id={product.heading.split(" ")[1] ?product.heading.split(" ")[1] : product.heading }>
                         {product.heading}
                     </h2>
                     <p className={page ? 'text-white': ''}>
                         {product.para_one && product.para_one}
                     </p>
-                    <p className={page ? 'text-white': ''}>
+                    <p className={page ? 'text-white': ''} >
                         {product.para_two && product.para_two}
                     </p>
                     <p className={page ? 'text-white': ''}>

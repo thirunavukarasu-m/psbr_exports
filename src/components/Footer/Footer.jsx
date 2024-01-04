@@ -9,9 +9,15 @@ import { Link } from 'react-router-dom'
 import './Footer.css'
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
+  };
   return (
     <>
-      <div className="footer-container p-5 d-flex justify-content-center align-items-start ">
+      <div className="footer-container p-5 d-flex justify-content-center align-items-start">
         <div className="footer-contact-info d-flex justify-content-center align-items-center flex-column">
           <img src={logo} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
           <div className="d-flex justify-content-center align-items-center social-icons pt-3">
@@ -27,34 +33,34 @@ const Footer = () => {
           <p className='m-0 fw-bold pt-2 text-dark'>Email: Psbrexporters@gmail.com</p>
 
         </div>
-        <div className="quick-links-footer-container">
+        <div className="quick-links-footer-container mt-5">
           <h1 className='fw-bold blue-text fs-1'>
             Quick Links
           </h1>
           <div className="quick-links-footer d-flex flex-column justify-content-center align-items-start">
-            <Link to="/">Home</Link>
-            <Link to="/about">About Us</Link>
-            <Link to="/contact-us">Contact Us</Link>
-            <Link to="/products">Our Products</Link>
+            <Link to="/" onClick={scrollToTop}>Home</Link>
+            <Link to="/about" onClick={scrollToTop}>About Us</Link>
+            <Link to="/contact-us" onClick={scrollToTop}>Contact Us</Link>
+            <Link to="/products" onClick={scrollToTop}>Our Products</Link>
           </div>
         </div>
-        <div className="our-products-footer-container">
+        <div className="our-products-footer-container mt-5">
           <h1 className='fw-bold blue-text fs-1'>
             Our Products
           </h1>
           <div className="our-products-footer d-flex justify-content-center align-items-start">
             <div className='our-products-footer-part-one d-flex flex-column justify-content-center align-items-start'>
-              <Link to="/products">Turmeric</Link>
-              <Link to="/products">Red Chilli</Link>
-              <Link to="/products">Black Pepper</Link>
-              <Link to="/products">Cumin</Link>
+              <Link to="/products#Turmeric" >Turmeric</Link>
+              <Link to="/products#chilli" >Red Chilli</Link>
+              <Link to="/products#Pepper">Black Pepper</Link>
+              <Link to="/products#Cumin">Cumin</Link>
             </div>
             <div className='our-products-footer-part-two d-flex flex-column justify-content-center align-items-start'>
-              <Link to="/products">Coriander</Link>
-              <Link to="/products">Cardamom</Link>
-              <Link to="/products">Cloves</Link>
-              <Link to="/products">Cinnamon</Link>
-              <Link to="/products">Tamarind</Link>
+              <Link to="/products#Coriander">Coriander</Link>
+              <Link to="/products#Cardamom">Cardamom</Link>
+              <Link to="/products#Cloved">Cloves</Link>
+              <Link to="/products#Cinnamon">Cinnamon</Link>
+              <Link to="/products#Tamarind">Tamarind</Link>
             </div>
           </div>
         </div>

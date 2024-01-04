@@ -1,6 +1,8 @@
 .footer-container {
     gap: 5rem;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     background: rgb(2,0,36);
     background: linear-gradient(273deg, rgba(2,0,36,1) 0%, rgba(207,207,207,1) 0%, rgba(231,231,231,1) 100%);
 }
@@ -17,6 +19,10 @@
 .our-products-footer > .our-products-footer-part-one, .our-products-footer > .our-products-footer-part-two {
     gap: 0.7rem;
 }
+.footer-contact-info > .psbr-logo {
+    height: auto;
+    max-width: 200px;
+  }
 
 
 @media (max-width: 762px) {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ProductsPage.css'
 import SingleProductInfo from '../../components/SingleProductInfo/SingleProductInfo'
 import black_pepper from '../../assets/products/black-pepper.jpg'
@@ -10,10 +10,29 @@ import red_chilli from '../../assets/products/red-chilli.jpg'
 import coriander from '../../assets/products/coriander.jpg'
 import tamarind from '../../assets/products/tamarind.jpg'
 import turmaric from '../../assets/products/turmaric.jpg'
+import { useLocation } from 'react-router-dom'
 
 
 
 const ProductsPage = () => {
+  const location = useLocation();
+  useEffect(() => {
+    // Extract the element ID from the URL hash
+    const elementId = location.hash.substring(1);
+
+    // Scroll to the element with the extracted ID
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth', // You can change this to 'auto' for an instant scroll
+      });
+    }
+
+    // Optional: Scroll to the top if no element ID is provided
+    if (!elementId) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.hash]);
   const products = [
     {
       img: black_pepper,
@@ -59,7 +78,7 @@ const ProductsPage = () => {
     },
     {
       img: red_chilli,
-      heading: "Red chillies",
+      heading: "Red chilli",
       para_one: "Exporter and supplier of Red chillies from India.",
       para_two: "We export varieties of chilli to all leading markets across the world. We have an expert network to source from all major chilli-producing states of India.",
       para_three: "Discover the fiery world of chilli peppers, known for their pungent flavour that adds heat to any dish. These versatile berries, from the genus Capsicum and part of the nightshade family, come in a variety of shapes, sizes, and levels of spiciness. Whether you prefer a mild heat or a bold and blazing experience, chilli peppers are an essential ingredient in cuisines worldwide. Get ready to ignite your taste buds with the vibrant and diverse flavours of chilli peppers."
@@ -73,7 +92,7 @@ const ProductsPage = () => {
     },
     {
       img: turmaric,
-      heading: "Turmaric",
+      heading: "Turmeric",
       para_one: "Exporter and supplier of quality Turmeric from India.",
       para_two: "The Indian subcontinent is the native habitat for this rhizomatous plant. The compound curcumin present in turmeric is a very active ingredient that fights against inflammation and is a powerful antioxidant.",
       para_three: "Turmeric, a versatile herb that grows up to 1 metre tall, is now available for export through PSBR Exports. This herb is known for its highly branched, yellow to orange, cylindrical, and aromatic rhizomes, making it an essential ingredient in various culinary and medicinal preparations. Its leaves are arranged in two rows, giving the plant a unique appearance. With its rich history and health benefits, PSBR Exports is proud to bring the best of turmeric to you. Get ready to experience the versatility of this aromatic herb!"

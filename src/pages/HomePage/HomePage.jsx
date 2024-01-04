@@ -63,7 +63,7 @@ const HomePage = () => {
       <Banner />
       
       <div className='pb-5' style={{backgroundColor: "#004A8D"}}>
-        <h1 className='text-center pt-5 orange-color text-white fs-1'> Who we are</h1>
+        <h1 className='text-center pt-5 orange-color text-white fs-1 fw-bold'> Who we are</h1>
         <SingleProductInfo product={psbr_exports} page={"home"}/>
       </div>
       <div className="bg-light p-3 mt-5 pb-5">
