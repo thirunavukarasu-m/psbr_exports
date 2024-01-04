@@ -32,17 +32,17 @@ const SingleProductInfo = ({product,index,page}) => {
                     {showSkeleton && <SkeletonLoader height={400} width={300}/>}
                     {showImage && <img src={product.img} alt="" />}
                 </div>
-                <div className="product-info">
+                <div className="product-info w-75">
                     <h2 className={page ? 'text-white fs-1 pb-3 fw-bold': 'blue-text fs-1 pb-3 fw-bold'} id={product.heading.split(" ")[1] ?product.heading.split(" ")[1] : product.heading }>
                         {product.heading}
                     </h2>
-                    <p className={page ? 'text-white': ''}>
+                    <p className={page ? 'text-white m-0': 'text-dark m-0'}>
                         {product.para_one && product.para_one}
                     </p>
-                    <p className={page ? 'text-white': ''} >
+                    <p className={page ? 'text-white m-0': 'text-dark m-0'} >
                         {product.para_two && product.para_two}
                     </p>
-                    <p className={page ? 'text-white': ''}>
+                    <p className={page ? 'text-white m-0': 'text-dark m-0'}>
                         {product.para_three && product.para_three}
                     </p>
                 </div>

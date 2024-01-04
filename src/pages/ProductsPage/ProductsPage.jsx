@@ -106,7 +106,7 @@ const ProductsPage = () => {
             Spices
           </h1>
         </div>
-        <div className="products-view p-5">
+        <div className="products-view p-3">
           {products.map((product,index) => {
             return (
               <>
