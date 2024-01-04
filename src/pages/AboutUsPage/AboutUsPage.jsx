@@ -9,6 +9,7 @@ import cart from '../../assets/cart.png'
 import tick from '../../assets/tick.png'
 import triangle from '../../assets/triangle.png'
 import world from '../../assets/world.png'
+import { motion as m } from 'framer-motion'
 
 
 const AboutUsPage = () => {
@@ -26,12 +27,28 @@ const AboutUsPage = () => {
   }
   return (
     <>
-      <div className="about-us-container mt-3 mb-5">
-        <div className="about-us-banner d-flex align-items-center justify-content-center mb-5">
-          <h1 className="fw-bold font-5 text-white">
-            About Us
-          </h1>
-        </div>
+      <m.div className="about-us-container mt-3 mb-5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+      >
+        <m.div className="about-us-banner d-flex align-items-center justify-content-center mb-5"
+          initial={{ y: "100%" }}
+          animate={{ y: "0%" }}
+          exit={{ opacity: 1 }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+        >
+          <div className="overflow-hidden p-2 mt-5">
+            <m.h1 className="fw-bold font-5 text-white"
+              animate={{ y: "0" }}
+              initial={{ y: "100%" }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              About Us
+            </m.h1>
+          </div>
+
+        </m.div>
         <SingleProductInfo product={about_us} index={1} />
         <div className="bg-dark-blue mt-5">
           <SingleProductInfo product={about_the_founder} page={"home"} index={2} />
@@ -93,7 +110,7 @@ const AboutUsPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </m.div>
     </>
   )
 }

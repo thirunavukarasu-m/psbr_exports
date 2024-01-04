@@ -32,7 +32,7 @@ const SingleProductInfo = ({product,index,page}) => {
                     {showSkeleton && <SkeletonLoader height={400} width={300}/>}
                     {showImage && <img src={product.img} alt="" />}
                 </div>
-                <div className="product-info w-75">
+                <div className="product-info">
                     <h2 className={page ? 'text-white fs-1 pb-3 fw-bold': 'blue-text fs-1 pb-3 fw-bold'} id={product.heading.split(" ")[1] ?product.heading.split(" ")[1] : product.heading }>
                         {product.heading}
                     </h2>

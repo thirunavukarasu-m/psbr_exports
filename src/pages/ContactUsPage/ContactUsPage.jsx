@@ -3,17 +3,33 @@ import './ContactUsPage.css'
 import email from '../../assets/mail.png'
 import phone from '../../assets/phone.png'
 import address from '../../assets/address.png'
+import { motion as m } from 'framer-motion'
 
 
 
 const ContactUsPage = () => {
   return (
-    <div className="contact-us-container mt-3 mb-5">
-      <div className="contact-us-banner d-flex align-items-center justify-content-center mb-5">
-        <h1 className="fw-bold font-5 text-white">
-          Contact Us
-        </h1>
-      </div>
+    <m.div className="contact-us-container mt-3 mb-5"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+    >
+      <m.div className="contact-us-banner d-flex align-items-center justify-content-center mb-5"
+        initial={{ y: "150%" }}
+        animate={{ y: "0%" }}
+        exit={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+      >
+        <div className="overflow-hidden p-2 mt-5">
+          <m.h1 className="fw-bold font-5 text-white"
+            animate={{ y: "0" }}
+            initial={{ y: "100%" }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            Contact Us
+          </m.h1>
+        </div>
+      </m.div>
       <h1 className='text-dark p-4 text-center fw-bold'> Get In Touch</h1>
       <div className="contact-us-cards bg-dark-blue d-flex p-4">
         <div className="contact-us-card p-4">
@@ -67,10 +83,10 @@ const ContactUsPage = () => {
         </div>
 
         <div className="google-map mt-5 mb-5">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31287.520794292028!2d76.67282197251521!3d11.411893949236184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd84b5f3d78d%3A0x179bdb14c93e3f42!2sOoty%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1704382951189!5m2!1sen!2sin"  style={{border: 0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31287.520794292028!2d76.67282197251521!3d11.411893949236184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8bd84b5f3d78d%3A0x179bdb14c93e3f42!2sOoty%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1704382951189!5m2!1sen!2sin" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-    </div>
+    </m.div>
   )
 }
 

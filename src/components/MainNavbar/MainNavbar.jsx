@@ -20,10 +20,10 @@ const MainNavbar = () => {
   return (
 
     <>
-      <nav class="navbar navbar-expand-md bg-light fixed-top">
-        <div class="container-fluid">
-          {width < threshold && <Link onClick={scrollToTop} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' /></Link>}
-          <button class="navbar-toggler" type="button" onClick={()=>{
+      <nav className="navbar navbar-expand-md bg-light fixed-top">
+        <div className="container-fluid">
+          {width < threshold && <Link onClick={scrollToTop} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" classNameName='psbr-logo' height={150} width={198}/></Link>}
+          <button className="navbar-toggler" type="button" onClick={()=>{
             if(navbarState === "collapse navbar-collapse") {
               setNavbarState("collapse navbar-collapse show")
             } else {
@@ -32,24 +32,24 @@ const MainNavbar = () => {
           }}>
             <img src={hamburger} alt="PSBR Exports logo" loading="lazy" height={28} width={28} />
           </button>
-          <div class={navbarState} id="navbarSupportedContent">
-            <ul class="navbar-nav">
+          <div className={navbarState} id="navbarSupportedContent">
+            <ul className="navbar-nav">
               {width > threshold && (
                 <li>
-                  <Link onClick={scrollToTop} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' /></Link>
+                  <Link onClick={scrollToTop} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" classNameName='psbr-logo' height={170} width={208} /></Link>
                 </li>
               )}
               <li>
-                <Link onClick={scrollToTop} class="nav-link" aria-current="page" to={"/"}>Home</Link>
+                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/"}>Home</Link>
               </li>
               <li>
-                <Link onClick={scrollToTop} class="nav-link" aria-current="page" to={"/products"}>Products</Link>
+                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/products"}>Products</Link>
               </li>
               <li>
-                <Link onClick={scrollToTop} class="nav-link" aria-current="page" to={"/about-us"}>About Us</Link>
+                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/about-us"}>About Us</Link>
               </li>
               <li>
-                <Link onClick={scrollToTop} class="nav-link" aria-current="page" to={"/contact-us"}>Contact Us</Link>
+                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/contact-us"}>Contact Us</Link>
               </li>
               <li>
                 <button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#exampleModal">Request Quote</button>

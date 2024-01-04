@@ -11,24 +11,20 @@ import coriander from '../../assets/products/coriander.jpg'
 import tamarind from '../../assets/products/tamarind.jpg'
 import turmaric from '../../assets/products/turmaric.jpg'
 import { useLocation } from 'react-router-dom'
+import { motion as m } from 'framer-motion'
 
 
 
 const ProductsPage = () => {
   const location = useLocation();
   useEffect(() => {
-    // Extract the element ID from the URL hash
     const elementId = location.hash.substring(1);
-
-    // Scroll to the element with the extracted ID
     const element = document.getElementById(elementId);
     if (element) {
       element.scrollIntoView({
-        behavior: 'smooth', // You can change this to 'auto' for an instant scroll
+        behavior: 'smooth',
       });
     }
-
-    // Optional: Scroll to the top if no element ID is provided
     if (!elementId) {
       window.scrollTo(0, 0);
     }
@@ -100,23 +96,40 @@ const ProductsPage = () => {
   ]
   return (
     <>
-      <div className="products-container mt-3 mb-5">
-        <div className="products-banner d-flex align-items-center justify-content-center">
-          <h1 className="fw-bold fs-1 text-white">
-            Spices
-          </h1>
-        </div>
+      <m.div className="products-container mt-3 mb-5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+      >
+        <m.div className="products-banner d-flex align-items-center justify-content-center"
+          initial={{ y: "100%" }}
+          animate={{ y: "0%" }}
+          exit={{ opacity: 1 }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+        >
+          <div className="overflow-hidden p-2 mt-5">
+
+            <m.h1 className="fw-bold fs-1 text-white"
+              animate={{ y: "0" }}
+              initial={{ y: "100%" }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              Spices
+            </m.h1>
+
+          </div>
+        </m.div>
         <div className="products-view p-3">
-          {products.map((product,index) => {
+          {products.map((product, index) => {
             return (
               <>
-                <SingleProductInfo product={product} index = {index}/>
+                <SingleProductInfo product={product} index={index} />
               </>
             )
           })}
 
         </div>
-      </div>
+      </m.div>
     </>
   )
 }
