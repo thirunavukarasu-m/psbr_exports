@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './MainNavbar.css'
 import { Link } from 'react-router-dom'
 import logo from "../../assets/psbr_bg_removed.png"
@@ -16,16 +16,23 @@ const MainNavbar = () => {
   const { width } = useWindowSize();
   const threshold = 768;
 
+  const [navbarState, setNavbarState] = useState("collapse navbar-collapse")
   return (
 
     <>
       <nav class="navbar navbar-expand-md bg-light fixed-top">
         <div class="container-fluid">
           {width < threshold && <Link onClick={scrollToTop} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' /></Link>}
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" onClick={()=>{
+            if(navbarState === "collapse navbar-collapse") {
+              setNavbarState("collapse navbar-collapse show")
+            } else {
+              setNavbarState("collapse navbar-collapse")
+            }
+          }}>
             <img src={hamburger} alt="PSBR Exports logo" loading="lazy" height={28} width={28} />
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class={navbarState} id="navbarSupportedContent">
             <ul class="navbar-nav">
               {width > threshold && (
                 <li>

@@ -14,15 +14,11 @@
 .contact-us-card {
     font-size: 20px;
     width: 600px;
-    /* min-width: 200px; */
-
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     background-color: white;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    gap: 2rem;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     &:hover {

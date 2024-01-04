@@ -15,8 +15,8 @@ const ContactUsPage = () => {
         </h1>
       </div>
       <h1 className='text-dark p-4 text-center fw-bold'> Get In Touch</h1>
-      <div className="contact-us-cards bg-dark-blue d-flex pt-5">
-        <div className="contact-us-card p-5">
+      <div className="contact-us-cards bg-dark-blue d-flex p-4">
+        <div className="contact-us-card p-4">
           <div className="contact-type">
             <img src={email} alt="" height={50} width={50} />
             <div className="contact-content">

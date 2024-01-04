@@ -30,7 +30,7 @@ const Footer = () => {
           <p className='m-0 fw-bold pt-2 text-dark'>Phone:</p>
           <p className='m-0 fw-bold pt-2 text-dark'>8610393469</p>
           <p className='m-0 fw-bold pt-2 text-dark'>9786251609</p>
-          <p className='m-0 fw-bold pt-2 text-dark'>Email: Psbrexporters@gmail.com</p>
+          <p className='m-0 fw-bold pt-2 text-dark text-center'>Email: Psbrexporters@gmail.com</p>
 
         </div>
         <div className="quick-links-footer-container mt-5">
