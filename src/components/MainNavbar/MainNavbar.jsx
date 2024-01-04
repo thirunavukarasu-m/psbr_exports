@@ -8,6 +8,7 @@ import useWindowSize from '../../utils/useWindowSize'
 
 const MainNavbar = () => {
   const scrollToTop = () => {
+    setNavbarState("collapse navbar-collapse")
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
