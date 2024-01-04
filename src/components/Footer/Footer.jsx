@@ -21,8 +21,10 @@ const Footer = () => {
             <img src={instagram} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
             <img src={linkedIn} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
           </div>
-          <p className='m-0 fw-bold pt-2 text-dark'>Phone: +91 6381693069</p>
-          <p className='m-0 fw-bold pt-2 text-dark'>Email: info@psbrexports.com</p>
+          <p className='m-0 fw-bold pt-2 text-dark'>Phone:</p>
+          <p className='m-0 fw-bold pt-2 text-dark'>8610393469</p>
+          <p className='m-0 fw-bold pt-2 text-dark'>9786251609</p>
+          <p className='m-0 fw-bold pt-2 text-dark'>Email: Psbrexporters@gmail.com</p>
 
         </div>
         <div className="quick-links-footer-container">

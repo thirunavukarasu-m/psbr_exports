@@ -3,10 +3,50 @@
 }
 .nav-link {
   color: black;
+  min-width: 120px;
   &:hover {
     color: orange;
   }
   &.active {
     color: orange;
+  }
+
+}
+
+.container-fluid {
+  width: 60%;
+}
+
+@media (max-width: 1150px) {
+  .container-fluid {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1015px) {
+  .container-fluid {
+    width: 85%;
+  }
+}
+@media (max-width: 965px) {
+  .container-fluid {
+    width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  .container-fluid {
+    width: 95%;
+  }
+  .navbar-brand {
+    margin-right: 0;
+  }
+  .psbr-logo {
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 856px) {
+  .container-fluid {
+    width: 100%;
   }
 }

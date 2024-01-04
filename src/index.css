@@ -10,7 +10,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
-  background-color: #004A8D;
   /* color: black; */
 }
 
@@ -25,7 +24,7 @@ body {
   font-weight: 600;
 }
 p {
-  color: #626262;
+  color: white;
 }
 
 a {

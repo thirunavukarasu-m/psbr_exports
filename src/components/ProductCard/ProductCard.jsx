@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
             };
 
         }
-    }, []);
+    }, [product.img]);
 
     return (
         <>
