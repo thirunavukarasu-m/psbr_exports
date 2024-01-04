@@ -6,6 +6,7 @@ import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 import MainNavbar from './components/MainNavbar/MainNavbar';
 import Footer from './components/Footer/Footer';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
+import MyNavbar from './components/MyNavbar/MyNavbar';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <>
 
       <Router>
-        <MainNavbar />
+        <MyNavbar />
         <div className="pages">
           <Routes>
             <Route path="/" Component={HomePage} />
