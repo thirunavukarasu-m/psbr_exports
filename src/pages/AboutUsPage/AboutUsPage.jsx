@@ -11,10 +11,6 @@ import triangle from '../../assets/triangle.png'
 import world from '../../assets/world.png'
 
 
-
-
-
-
 const AboutUsPage = () => {
   const about_us = {
     img: site,
