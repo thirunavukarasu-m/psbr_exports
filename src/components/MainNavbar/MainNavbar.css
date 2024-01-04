@@ -3,7 +3,7 @@
 }
 .nav-link {
   color: black;
-  min-width: 120px;
+  width: auto;
   &:hover {
     color: orange;
   }
@@ -12,7 +12,9 @@
   }
 
 }
-
+.navbar-nav {
+  gap: 1rem;
+}
 .container-fluid {
   width: 60%;
 }

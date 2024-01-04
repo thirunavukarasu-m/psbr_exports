@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <>
-            <Link to="/products" onClick={scrollToTop}>
+            <Link to={product.heading.split(" ")[1] ? "/products#" + product.heading.split(" ")[1] : "/products#"+product.heading} onClick={scrollToTop}>
                 {showSkeleton && <SkeletonLoader height={300} width={350} />}
 
                 {showImage && (

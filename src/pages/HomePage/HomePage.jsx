@@ -36,7 +36,7 @@ const HomePage = () => {
       img: cumin
     },
     {
-      heading: "Red Chilli",
+      heading: "Red chilli",
       img: red_chilli
     },
     {

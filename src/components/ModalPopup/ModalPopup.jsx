@@ -43,7 +43,7 @@ const ModalPopup = () => {
                                     <input type="text" className="form-control" id="interested-products" placeholder='Interested Products'/>
                                 </div>
                                 <div className="mb-3">
-                                    <textarea className="form-control" id="message-text" placeholder='Message'></textarea>
+                                    <textarea className="form-control" id="message-text inputGroup-sizing-lg" placeholder='Message'></textarea>
                                 </div>
                             </form>
                         </div>
