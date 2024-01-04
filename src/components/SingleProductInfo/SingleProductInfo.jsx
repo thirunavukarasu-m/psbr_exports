@@ -33,7 +33,7 @@ const SingleProductInfo = ({product,index}) => {
                     {showImage && <img src={product.img} alt="" />}
                 </div>
                 <div className="product-info">
-                    <h2 className='text-white fs-1'>
+                    <h2 className='blue-text fs-1'>
                         {product.heading}
                     </h2>
                     <p>
