@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
 
                 {showImage && (
                     <div className="product-card">
-                        <h3 className='text-center fs-3 pt-2 text-white'>{product.heading}</h3>
+                        <h3 className='text-center fs-3 pt-2 blue-text'>{product.heading}</h3>
                         <img src={product.img} alt="" />
                     </div>
                 )}

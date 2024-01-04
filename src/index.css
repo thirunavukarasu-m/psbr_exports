@@ -19,8 +19,8 @@ body {
   max-width: 160px;
 }
 
-.orange-text {
-  color: orange;
+.blue-text {
+  color: #004A8D;
   font-size: 50px;
   font-weight: 600;
 }
@@ -34,4 +34,8 @@ a {
   &:hover {
     color: orange;
   }
+}
+
+.pb-5 {
+  padding-bottom: 150px!important;
 }

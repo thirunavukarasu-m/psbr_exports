@@ -13,6 +13,7 @@ import coriander from '../../assets/products/coriander.jpg'
 import tamarind from '../../assets/products/tamarind.jpg'
 import turmaric from '../../assets/products/turmaric.jpg'
 import ProductCard from '../../components/ProductCard/ProductCard'
+import ModalPopup from '../../components/ModalPopup/ModalPopup'
 const HomePage = () => {
   const products = [
     {
@@ -60,24 +61,25 @@ const HomePage = () => {
   }
   return (
     <>
-
         <Banner />
-        <h1 className='text-center pt-5 orange-color orange-text'> Who we are</h1>
+        <h1 className='text-center pt-5 orange-color text-white fs-1'> Who we are</h1>
         <SingleProductInfo product={psbr_exports} />
-        <h2 className='text-center pt-5 orange-text'> Explore </h2>
-        <h1 className='text-center pt-4 orange-text'> Our Products </h1>
-        <div className="products-card-container d-flex pt-4 mb-5">
-          {
-            products.map((product) => {
-              return (
-                <>
-                  <ProductCard product={product} />
-                </>
-              )
-            })
-          }
+        <div className="bg-light p-3 mt-5 pb-5">
+          <h2 className='text-center pt-5 blue-text fs-1'> Explore </h2>
+          <h1 className='text-center pt-4 blue-text fs-1'> Our Products </h1>
+          <div className="products-card-container d-flex pt-4 mb-5">
+            {
+              products.map((product) => {
+                return (
+                  <>
+                    <ProductCard product={product} />
+                  </>
+                )
+              })
+            }
+          </div>
+          <ModalPopup/>
         </div>
-    
     </>
   )
 }

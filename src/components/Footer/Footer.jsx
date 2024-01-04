@@ -11,7 +11,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <>
-      <div className="footer-container p-4 d-flex justify-content-center align-items-start ">
+      <div className="footer-container p-5 d-flex justify-content-center align-items-start ">
         <div className="footer-contact-info d-flex justify-content-center align-items-center flex-column">
           <img src={logo} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
           <div className="d-flex justify-content-center align-items-center social-icons pt-3">
@@ -26,7 +26,7 @@ const Footer = () => {
 
         </div>
         <div className="quick-links-footer-container">
-          <h1 className='fw-bold orange-text fs-1'>
+          <h1 className='fw-bold blue-text fs-1'>
             Quick Links
           </h1>
           <div className="quick-links-footer d-flex flex-column justify-content-center align-items-start">
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="our-products-footer-container">
-          <h1 className='fw-bold orange-text fs-1'>
+          <h1 className='fw-bold blue-text fs-1'>
             Our Products
           </h1>
           <div className="our-products-footer d-flex justify-content-center align-items-start">

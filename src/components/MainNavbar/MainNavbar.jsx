@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import logo from "../../assets/psbr_bg_removed.png"
 import hamburger from "../../assets/menu.png"
 
-import Overlay from '../Overlay/Overlay'
-
 const MainNavbar = () => {
 
 
@@ -35,6 +33,7 @@ const MainNavbar = () => {
             </ul>
           </div>
         </div>
+        
       </nav>
     </>
   )
