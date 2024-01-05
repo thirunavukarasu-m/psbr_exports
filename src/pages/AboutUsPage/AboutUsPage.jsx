@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './AboutUsPage.css'
 import SingleProductInfo from '../../components/SingleProductInfo/SingleProductInfo'
 import human from '../../assets/about-us-human.jpg'
@@ -9,10 +9,35 @@ import cart from '../../assets/cart.png'
 import tick from '../../assets/tick.png'
 import triangle from '../../assets/triangle.png'
 import world from '../../assets/world.png'
+import about_us_ship from "../../assets/about-us-ship.jpg"
 import { motion as m } from 'framer-motion'
-
+import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader'
 
 const AboutUsPage = () => {
+  const [showSkeleton, setShowSkeleton] = useState(true);
+  const [showImage, setShowImage] = useState(false);
+
+  useEffect(() => {
+    const imageAlreadyLoaded = sessionStorage.getItem('bannerInAboutPage');
+    if (imageAlreadyLoaded) {
+      setShowSkeleton(false);
+      setShowImage(true);
+    } else {
+      const image = new Image();
+      image.src = about_us_ship;
+      image.onload = () => {
+        // const timeoutId = setTimeout(() => {
+        //   setShowSkeleton(false);
+        //   setShowImage(true);
+        //   sessionStorage.setItem('bannerInProductPage', 'true');
+        // }, 2000);
+        setShowSkeleton(false);
+        setShowImage(true);
+        sessionStorage.setItem('bannerInAboutPage', 'true');
+        // return () => clearTimeout(timeoutId);
+      };
+    }
+  }, []);
   const about_us = {
     img: site,
     heading: "PSBR Exports",
@@ -32,23 +57,27 @@ const AboutUsPage = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <m.div className="about-us-banner d-flex align-items-center justify-content-center mb-5"
-          initial={{ y: "100%" }}
-          animate={{ y: "0%" }}
-          exit={{ opacity: 1 }}
-          transition={{ duration: 0.75, ease: "easeOut" }}
-        >
-          <div className="overflow-hidden p-2 mt-5">
-            <m.h1 className="fw-bold font-5 text-white"
-              animate={{ y: "0" }}
-              initial={{ y: "100%" }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-            >
-              About Us
-            </m.h1>
-          </div>
+        {(!showImage && showSkeleton) && <SkeletonLoader style={{ height: 60 + "vh", width: 100 + "%" }} />}
 
-        </m.div>
+        {showImage && (
+          <m.div className="about-us-banner d-flex align-items-center justify-content-center mb-5"
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1 }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+          >
+            <div className="overflow-hidden p-2 mt-5">
+              <m.h1 className="fw-bold font-5 text-white"
+                animate={{ y: "0" }}
+                initial={{ y: "100%" }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              >
+                About Us
+              </m.h1>
+            </div>
+          </m.div>
+        )}
+
         <SingleProductInfo product={about_us} index={1} />
         <div className="bg-dark-blue mt-5">
           <SingleProductInfo product={about_the_founder} page={"home"} index={2} />

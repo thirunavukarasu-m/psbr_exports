@@ -1,35 +1,65 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ContactUsPage.css'
 import email from '../../assets/mail.png'
 import phone from '../../assets/phone.png'
 import address from '../../assets/address.png'
 import { motion as m } from 'framer-motion'
+import contact_us_img from "../../assets/contact-us.jpg"
+import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader'
+
 
 
 
 const ContactUsPage = () => {
+  const [showSkeleton, setShowSkeleton] = useState(true);
+  const [showImage, setShowImage] = useState(false);
+  useEffect(() => {
+    const imageAlreadyLoaded = sessionStorage.getItem('bannerInContactPage');
+    if (imageAlreadyLoaded) {
+      setShowSkeleton(false);
+      setShowImage(true);
+    } else {
+      const image = new Image();
+      image.src = contact_us_img;
+      image.onload = () => {
+        // const timeoutId = setTimeout(() => {
+        //   setShowSkeleton(false);
+        //   setShowImage(true);
+        //   sessionStorage.setItem('bannerInProductPage', 'true');
+        // }, 2000);
+        setShowSkeleton(false);
+        setShowImage(true);
+        sessionStorage.setItem('bannerInContactPage', 'true');
+        // return () => clearTimeout(timeoutId);
+      };
+    }
+  }, []);
   return (
     <m.div className="contact-us-container mt-3 mb-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75, ease: "easeOut" }}
     >
-      <m.div className="contact-us-banner d-flex align-items-center justify-content-center mb-5"
-        initial={{ y: "150%" }}
-        animate={{ y: "0%" }}
-        exit={{ opacity: 1 }}
-        transition={{ duration: 0.75, ease: "easeOut" }}
-      >
-        <div className="overflow-hidden p-2 mt-5">
-          <m.h1 className="fw-bold font-5 text-white"
-            animate={{ y: "0" }}
-            initial={{ y: "100%" }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-          >
-            Contact Us
-          </m.h1>
-        </div>
-      </m.div>
+      {(!showImage && showSkeleton) && <SkeletonLoader style={{ height: 60 + "vh", width: 100 + "%" }} />}
+      {showImage && (
+        <m.div className="contact-us-banner d-flex align-items-center justify-content-center mb-5"
+          initial={{ y: "150%" }}
+          animate={{ y: "0%" }}
+          exit={{ opacity: 1 }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+        >
+          <div className="overflow-hidden p-2 mt-5">
+            <m.h1 className="fw-bold font-5 text-white"
+              animate={{ y: "0" }}
+              initial={{ y: "100%" }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              Contact Us
+            </m.h1>
+          </div>
+        </m.div>
+      )}
+
       <h1 className='text-dark p-4 text-center fw-bold'> Get In Touch</h1>
       <div className="contact-us-cards bg-dark-blue d-flex p-4">
         <div className="contact-us-card p-4">

@@ -28,7 +28,6 @@ const ProductCard = ({ product }) => {
                 }, 2000);
                 return () => clearTimeout(timeoutId);
             };
-
         }
     }, [product.img]);
 

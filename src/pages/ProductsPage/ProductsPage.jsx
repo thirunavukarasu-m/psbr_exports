@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ProductsPage.css'
 import SingleProductInfo from '../../components/SingleProductInfo/SingleProductInfo'
 import black_pepper from '../../assets/products/black-pepper.jpg'
@@ -12,10 +12,15 @@ import tamarind from '../../assets/products/tamarind.jpg'
 import turmaric from '../../assets/products/turmaric.jpg'
 import { useLocation } from 'react-router-dom'
 import { motion as m } from 'framer-motion'
+import spices_common from "../../assets/spices_common.jpg"
+import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader'
+
 
 
 
 const ProductsPage = () => {
+  const [showSkeleton, setShowSkeleton] = useState(true);
+  const [showImage, setShowImage] = useState(false);
   const location = useLocation();
   useEffect(() => {
     const elementId = location.hash.substring(1);
@@ -28,7 +33,26 @@ const ProductsPage = () => {
     if (!elementId) {
       window.scrollTo(0, 0);
     }
-  }, [location.hash]);
+    const imageAlreadyLoaded = sessionStorage.getItem('bannerInProductPage');
+    if (imageAlreadyLoaded) {
+      setShowSkeleton(false);
+      setShowImage(true);
+    } else {
+      const image = new Image();
+      image.src = spices_common;
+      image.onload = () => {
+        // const timeoutId = setTimeout(() => {
+        //   setShowSkeleton(false);
+        //   setShowImage(true);
+        //   sessionStorage.setItem('bannerInProductPage', 'true');
+        // }, 2000);
+        // return () => clearTimeout(timeoutId);
+        setShowSkeleton(false);
+        setShowImage(true);
+        sessionStorage.setItem('bannerInProductPage', 'true');
+      };
+    }
+  }, []);
   const products = [
     {
       img: black_pepper,
@@ -101,24 +125,27 @@ const ProductsPage = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <m.div className="products-banner d-flex align-items-center justify-content-center"
-          initial={{ y: "100%" }}
-          animate={{ y: "0%" }}
-          exit={{ opacity: 1 }}
-          transition={{ duration: 0.75, ease: "easeOut" }}
-        >
-          <div className="overflow-hidden p-2 mt-5">
+        {(!showImage && showSkeleton) && <SkeletonLoader style={{ height: 60 + "vh", width: 100 + "%" }} />}
+        {showImage && (
+          <m.div className="products-banner d-flex align-items-center justify-content-center"
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            exit={{ opacity: 1 }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+          >
+            <div className="overflow-hidden p-2 mt-5">
 
-            <m.h1 className="fw-bold fs-1 text-white"
-              animate={{ y: "0" }}
-              initial={{ y: "100%" }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-            >
-              Spices
-            </m.h1>
+              <m.h1 className="fw-bold fs-1 text-white"
+                animate={{ y: "0" }}
+                initial={{ y: "100%" }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              >
+                Spices
+              </m.h1>
+            </div>
+          </m.div>
+        )}
 
-          </div>
-        </m.div>
         <div className="products-view p-3">
           {products.map((product, index) => {
             return (
