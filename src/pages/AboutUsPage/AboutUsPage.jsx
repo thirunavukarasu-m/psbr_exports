@@ -64,7 +64,7 @@ const AboutUsPage = () => {
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
             exit={{ opacity: 1 }}
-            transition={{ duration: 0.75, ease: "easeOut" }}
+            transition={{ duration: 0.75, ease: "easeOut", delay: 0.4  }}
           >
             <div className="overflow-hidden p-2 mt-5">
               <m.h1 className="fw-bold font-5 text-white"
