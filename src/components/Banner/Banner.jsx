@@ -39,7 +39,7 @@ const Banner = () => {
                     initial={{ y: "100%" }}
                     animate={{ y: "0%" }}
                     exit={{ opacity: 1 }}
-                    transition={{ duration: 0.75, ease: "easeOut", delay: 0.4  }}
+                    transition={{ duration: 0.75, ease: "easeOut", delay: 0.1  }}
                 >
 
                     <div className="overflow-hidden p-2 mt-5">
