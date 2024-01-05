@@ -65,9 +65,11 @@ const HomePage = () => {
       <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.75, ease: "easeOut" }}
+        transition={{ duration: 0.75, ease: "easeOut",delay:0.4 }}
       >
-        <Banner />
+        <div className="overflow-hidden">
+          <Banner />
+        </div>
         <div className='pb-5' style={{ backgroundColor: "#004A8D" }}>
           <h1 className='text-center pt-5 orange-color text-white fs-1 fw-bold'> Who we are</h1>
           <SingleProductInfo product={psbr_exports} page={"home"} />

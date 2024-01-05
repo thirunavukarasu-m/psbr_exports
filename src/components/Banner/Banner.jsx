@@ -17,15 +17,12 @@ const Banner = () => {
             const image = new Image();
             image.src = ship;
             image.onload = () => {
-                // const timeoutId = setTimeout(() => {
-                //   setShowSkeleton(false);
-                //   setShowImage(true);
-                //   sessionStorage.setItem('bannerInProductPage', 'true');
-                // }, 2000);
-                setShowSkeleton(false);
-                setShowImage(true);
-                sessionStorage.setItem('bannerInHomePage', 'true');
-                // return () => clearTimeout(timeoutId);
+                const timeoutId = setTimeout(() => {
+                  setShowSkeleton(false);
+                  setShowImage(true);
+                  sessionStorage.setItem('bannerInHomePage', 'true');
+                }, 2000);
+                return () => clearTimeout(timeoutId);
             };
         }
     }, []);

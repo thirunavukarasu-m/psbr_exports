@@ -16,9 +16,8 @@ function App({ router }) {
 
       <Router>
         <MainNavbar />
-
-        <div className="pages">
-          <AnimatePresence >
+        <AnimatePresence >
+          <div className="pages">
             <Routes>
               <Route path="/" Component={HomePage} key={1} />
               <Route path="/products" Component={ProductsPage} key={2} />
@@ -26,8 +25,8 @@ function App({ router }) {
               <Route path="/contact-us" Component={ContactUsPage} key={4} />
               <Route path="/products" Component={ProductsPage} key={5} />
             </Routes>
-          </AnimatePresence>
-        </div>
+          </div>
+        </AnimatePresence>
 
         <Footer />
       </Router>

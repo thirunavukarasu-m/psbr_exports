@@ -26,15 +26,12 @@ const AboutUsPage = () => {
       const image = new Image();
       image.src = about_us_ship;
       image.onload = () => {
-        // const timeoutId = setTimeout(() => {
-        //   setShowSkeleton(false);
-        //   setShowImage(true);
-        //   sessionStorage.setItem('bannerInProductPage', 'true');
-        // }, 2000);
-        setShowSkeleton(false);
-        setShowImage(true);
-        sessionStorage.setItem('bannerInAboutPage', 'true');
-        // return () => clearTimeout(timeoutId);
+        const timeoutId = setTimeout(() => {
+          setShowSkeleton(false);
+          setShowImage(true);
+          sessionStorage.setItem('bannerInAboutPage', 'true');
+        }, 2000);
+        return () => clearTimeout(timeoutId);
       };
     }
   }, []);
@@ -55,27 +52,29 @@ const AboutUsPage = () => {
       <m.div className="about-us-container mt-3 mb-5"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.75, ease: "easeOut" }}
+        transition={{ duration: 0.75, ease: "easeOut", delay: 0.4 }}
       >
         {(!showImage && showSkeleton) && <SkeletonLoader style={{ height: 60 + "vh", width: 100 + "%" }} />}
 
         {showImage && (
-          <m.div className="about-us-banner d-flex align-items-center justify-content-center mb-5"
-            initial={{ y: "100%" }}
-            animate={{ y: "0%" }}
-            exit={{ opacity: 1 }}
-            transition={{ duration: 0.75, ease: "easeOut", delay: 0.1  }}
-          >
-            <div className="overflow-hidden p-2 mt-5">
-              <m.h1 className="fw-bold font-5 text-white"
-                animate={{ y: "0" }}
-                initial={{ y: "100%" }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-              >
-                About Us
-              </m.h1>
-            </div>
-          </m.div>
+          <div className="overflow-hidden">
+            <m.div className="about-us-banner d-flex align-items-center justify-content-center mb-5"
+              initial={{ y: "100%" }}
+              animate={{ y: "0%" }}
+              exit={{ opacity: 1 }}
+              transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
+            >
+              <div className="overflow-hidden p-2 mt-5">
+                <m.h1 className="fw-bold font-5 text-white"
+                  animate={{ y: "0" }}
+                  initial={{ y: "100%" }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                >
+                  About Us
+                </m.h1>
+              </div>
+            </m.div>
+          </div>
         )}
 
         <SingleProductInfo product={about_us} index={1} />

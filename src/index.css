@@ -24,6 +24,7 @@ body {
 }
 p {
   color: white;
+  text-align: justify;
 }
 
 a {
@@ -45,4 +46,10 @@ a {
 
 .bg-dark-blue {
   background-color: #004A8D;
+}
+
+@media (max-width: 762px) {
+  p {
+    font-size: 16px;
+  }
 }

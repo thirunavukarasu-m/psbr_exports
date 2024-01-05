@@ -12,7 +12,7 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', 
+      behavior: 'smooth',
     });
   };
   return (
@@ -37,30 +37,30 @@ const Footer = () => {
           <h1 className='fw-bold blue-text fs-1'>
             Quick Links
           </h1>
-          <div className="quick-links-footer d-flex flex-column justify-content-center align-items-start">
+          <div className="quick-links-footer d-flex flex-column justify-content-center align-items-center">
             <Link to="/" onClick={scrollToTop}>Home</Link>
-            <Link to="/about" onClick={scrollToTop}>About Us</Link>
+            <Link to="/about-us" onClick={scrollToTop}>About Us</Link>
             <Link to="/contact-us" onClick={scrollToTop}>Contact Us</Link>
             <Link to="/products" onClick={scrollToTop}>Our Products</Link>
           </div>
         </div>
         <div className="our-products-footer-container mt-5">
-          <h1 className='fw-bold blue-text fs-1'>
+          <h1 className='fw-bold blue-text fs-1 text-center'>
             Our Products
           </h1>
-          <div className="our-products-footer d-flex justify-content-center align-items-start">
-            <div className='our-products-footer-part-one d-flex flex-column justify-content-center align-items-start'>
+          <div className="our-products-footer d-flex justify-content-center align-items-center">
+            <div className='our-products-footer-part-one d-flex flex-column justify-content-center align-items-center'>
+              <Link to="/products#Cumin">Cumin</Link>
               <Link to="/products#Turmeric" >Turmeric</Link>
               <Link to="/products#chilli" >Red Chilli</Link>
               <Link to="/products#Pepper">Black Pepper</Link>
-              <Link to="/products#Cumin">Cumin</Link>
             </div>
-            <div className='our-products-footer-part-two d-flex flex-column justify-content-center align-items-start'>
-              <Link to="/products#Coriander">Coriander</Link>
-              <Link to="/products#Cardamom">Cardamom</Link>
-              <Link to="/products#Cloved">Cloves</Link>
+            <div className='our-products-footer-part-two d-flex flex-column justify-content-center align-items-center'>
+              <Link to="/products#Cloves">Cloves</Link>
               <Link to="/products#Cinnamon">Cinnamon</Link>
               <Link to="/products#Tamarind">Tamarind</Link>
+              <Link to="/products#Coriander">Coriander</Link>
+              <Link to="/products#Cardamom">Cardamom</Link>
             </div>
           </div>
         </div>

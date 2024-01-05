@@ -10,6 +10,8 @@ import red_chilli from '../../assets/products/red-chilli.jpg'
 import coriander from '../../assets/products/coriander.jpg'
 import tamarind from '../../assets/products/tamarind.jpg'
 import turmaric from '../../assets/products/turmaric.jpg'
+import nutmeg from '../../assets/products/nutmeg.jpg'
+
 import { useLocation } from 'react-router-dom'
 import { motion as m } from 'framer-motion'
 import spices_common from "../../assets/spices_common.jpg"
@@ -41,15 +43,12 @@ const ProductsPage = () => {
       const image = new Image();
       image.src = spices_common;
       image.onload = () => {
-        // const timeoutId = setTimeout(() => {
-        //   setShowSkeleton(false);
-        //   setShowImage(true);
-        //   sessionStorage.setItem('bannerInProductPage', 'true');
-        // }, 2000);
-        // return () => clearTimeout(timeoutId);
-        setShowSkeleton(false);
-        setShowImage(true);
-        sessionStorage.setItem('bannerInProductPage', 'true');
+        const timeoutId = setTimeout(() => {
+          setShowSkeleton(false);
+          setShowImage(true);
+          sessionStorage.setItem('bannerInProductPage', 'true');
+        }, 2000);
+        return () => clearTimeout(timeoutId);
       };
     }
   }, []);
@@ -116,34 +115,44 @@ const ProductsPage = () => {
       para_one: "Exporter and supplier of quality Turmeric from India.",
       para_two: "The Indian subcontinent is the native habitat for this rhizomatous plant. The compound curcumin present in turmeric is a very active ingredient that fights against inflammation and is a powerful antioxidant.",
       para_three: "Turmeric, a versatile herb that grows up to 1 metre tall, is now available for export through PSBR Exports. This herb is known for its highly branched, yellow to orange, cylindrical, and aromatic rhizomes, making it an essential ingredient in various culinary and medicinal preparations. Its leaves are arranged in two rows, giving the plant a unique appearance. With its rich history and health benefits, PSBR Exports is proud to bring the best of turmeric to you. Get ready to experience the versatility of this aromatic herb!"
-    }
+    },
+    {
+      img: nutmeg,
+      heading: "Nutmeg",
+      para_one: "Exporter and supplier of quality Nutmeg from India.",
+      para_two: "Nutmeg is the spice made by grinding the seed of the fragrant nutmeg tree (Myristica fragrans) into powder. The spice has a distinctive pungent fragrance and a warm, slightly sweet taste; it is used to flavor many kinds of baked goods, confections, puddings, potatoes, meats, sausages, sauces, vegetables, and such beverages as eggnog",
+      para_three: "The seeds are dried gradually in the sun over a period of 15 to 30 weeks. During this time, the nutmeg shrinks away from its hard seed coat until the kernels rattle in their shells when shaken. The shell is then broken with a wooden club and the nutmegs are picked out. Dried nutmegs are greenish brown ovoids with furrowed surfaces.[3] The nutmegs are roughly egg-shaped, about 20.5–30 mm (0.81–1.18 in) long and 15–18 mm (0.59–0.71 in) wide, weighing 5–10 g (0.18–0.35 oz) dried."
+    },
+
   ]
   return (
     <>
       <m.div className="products-container mt-3 mb-5"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.75, ease: "easeOut" }}
+        transition={{ duration: 0.75, ease: "easeOut",delay:0.4 }}
       >
         {(!showImage && showSkeleton) && <SkeletonLoader style={{ height: 60 + "vh", width: 100 + "%" }} />}
         {showImage && (
-          <m.div className="products-banner d-flex align-items-center justify-content-center"
-            initial={{ y: "100%" }}
-            animate={{ y: "0%" }}
-            exit={{ opacity: 1 }}
-            transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
-          >
-            <div className="overflow-hidden p-2 mt-5">
+          <div className="overflow-hidden">
+            <m.div className="products-banner d-flex align-items-center justify-content-center"
+              initial={{ y: "100%" }}
+              animate={{ y: "0%" }}
+              exit={{ opacity: 1 }}
+              transition={{ duration: 0.75, ease: "easeOut", delay: 0.1 }}
+            >
+              <div className="overflow-hidden p-2 mt-5">
 
-              <m.h1 className="fw-bold fs-1 text-white"
-                animate={{ y: "0" }}
-                initial={{ y: "100%" }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-              >
-                Spices
-              </m.h1>
-            </div>
-          </m.div>
+                <m.h1 className="fw-bold text-white font-5"
+                  animate={{ y: "0" }}
+                  initial={{ y: "100%" }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                >
+                  Spices
+                </m.h1>
+              </div>
+            </m.div>
+          </div>
         )}
 
         <div className="products-view p-3">

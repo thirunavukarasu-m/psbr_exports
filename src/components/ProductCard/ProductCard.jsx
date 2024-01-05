@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react'
 import "./ProductCard.css"
 import { Link } from 'react-router-dom'
 import SkeletonLoader from '../SkeletonLoader/SkeletonLoader'
+import { motion as m } from 'framer-motion'
+
 
 const ProductCard = ({ product }) => {
     const [showSkeleton, setShowSkeleton] = useState(true);
     const [showImage, setShowImage] = useState(false);
     const scrollToTop = () => {
         window.scrollTo({
-          top: 0,
-          behavior: 'smooth', 
+            top: 0,
+            behavior: 'smooth',
         });
-      };
+    };
     useEffect(() => {
         const imageAlreadyLoaded = sessionStorage.getItem('imageInHomeLoaded');
         if (imageAlreadyLoaded) {
@@ -33,16 +35,22 @@ const ProductCard = ({ product }) => {
 
     return (
         <>
-            <Link to={product.heading.split(" ")[1] ? "/products#" + product.heading.split(" ")[1] : "/products#"+product.heading} onClick={scrollToTop}>
+            <Link to={product.heading.split(" ")[1] ? "/products#" + product.heading.split(" ")[1] : "/products#" + product.heading} onClick={scrollToTop}
+
+            >
                 {showSkeleton && <SkeletonLoader height={300} width={350} />}
 
                 {showImage && (
-                    <div className="product-card">
+                    <m.div className="product-card"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, ease: "easeOut",delay:0.4 }}
+                        viewport={{ once: true }}
+                    >
                         <h3 className='text-center fs-3 pt-2 blue-text'>{product.heading}</h3>
                         <img src={product.img} alt="" />
-                    </div>
+                    </m.div>
                 )}
-
             </Link>
 
         </>
