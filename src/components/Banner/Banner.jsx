@@ -46,13 +46,13 @@ const Banner = () => {
                             initial={{ y: "100%" }}
                             transition={{ delay: 0.5, duration: 0.5 }}
                         >
-                            <p className='m-0 fw-bold fs-1'>
+                            <p className='m-0 fw-bold fs-1 text-center'>
                                 Welcome to
                             </p>
                             <h1 className='m-0 fw-bold banner-header text-black'>
                                 PSBR Exports
                             </h1>
-                            <p className='m-0 fs-1'>We Export Quality</p>
+                            <p className='m-0 fs-1 text-center'>We Export Quality</p>
                         </m.div>
                     </div>
                 </m.div>

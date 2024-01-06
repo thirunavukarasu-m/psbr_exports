@@ -5,6 +5,7 @@ import logo from "../../assets/psbr_bg_removed.png"
 import hamburger from "../../assets/menu.png"
 import ModalPopup from '../ModalPopup/ModalPopup'
 import useWindowSize from '../../utils/useWindowSize'
+import { motion as m } from 'framer-motion'
 
 const MainNavbar = () => {
   const scrollToTop = () => {
@@ -34,7 +35,28 @@ const MainNavbar = () => {
             <img src={hamburger} alt="PSBR Exports logo" loading="lazy" height={28} width={28} />
           </button>
           <div className={navbarState} id="navbarSupportedContent">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav"
+              variants={{
+                open: {
+                  clipPath: "inset(0% 0% 0% 0% round 10px)",
+                  transition: {
+                    type: "spring",
+                    bounce: 0,
+                    duration: 0.7,
+                    delayChildren: 0.3,
+                    staggerChildren: 0.05
+                  }
+                },
+                closed: {
+                  clipPath: "inset(10% 50% 90% 50% round 10px)",
+                  transition: {
+                    type: "spring",
+                    bounce: 0,
+                    duration: 0.3
+                  }
+                }
+              }}
+            >
               {width > threshold && (
                 <li>
                   <Link onClick={scrollToTop} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" classNameName='psbr-logo' height={170} width={208} /></Link>

@@ -7,27 +7,36 @@ import MainNavbar from './components/MainNavbar/MainNavbar';
 import Footer from './components/Footer/Footer';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import { AnimatePresence } from 'framer-motion';
+import PageTransition from './utils/PageTransition';
 
 
-function App({ router }) {
-
+function App() {
   return (
     <>
-
       <Router>
         <MainNavbar />
-        <AnimatePresence >
-          <div className="pages">
+        <div className="pages">
+          <AnimatePresence mode='wait'>
             <Routes>
-              <Route path="/" Component={HomePage} key={1} />
-              <Route path="/products" Component={ProductsPage} key={2} />
-              <Route path="/about-us" Component={AboutUsPage} key={3} />
-              <Route path="/contact-us" Component={ContactUsPage} key={4} />
-              <Route path="/products" Component={ProductsPage} key={5} />
+              <Route
+                path="/"
+                element={<PageTransition><HomePage /></PageTransition>}
+              />
+              <Route
+                path="/products"
+                element={<PageTransition><ProductsPage /></PageTransition>}
+              />
+              <Route
+                path="/about-us"
+                element={<PageTransition><AboutUsPage /></PageTransition>}
+              />
+              <Route
+                path="/contact-us"
+                element={<PageTransition><ContactUsPage /></PageTransition>}
+              />
             </Routes>
-          </div>
-        </AnimatePresence>
-
+          </AnimatePresence>
+        </div>
         <Footer />
       </Router>
     </>
