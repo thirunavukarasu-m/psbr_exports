@@ -3,22 +3,34 @@ import './ContactUsPage.css'
 import email from '../../assets/mail.png'
 import phone from '../../assets/phone.png'
 import address from '../../assets/address.png'
-import { animate, motion as m, stagger } from 'framer-motion'
+import { motion as m } from 'framer-motion'
 import contact_us_img from "../../assets/contact.jpeg"
 import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader'
+import { useFormik } from 'formik'
+import { supportValidation } from '../../utils/validationSchema'
+import { handleSendEmail } from '../../utils/EmailService'
 
 
 
 
 const ContactUsPage = () => {
-  // animate(
-  //   "p",
-  //   { opacity: 0, scale: 0.3, filter: "blur(20px)" },
-  //   {
-  //     duration: 0.2,
-  //     delay: staggerMenuItems,
-  //   }
-  // );
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      interested_products: "",
+      message: ""
+    },
+    validationSchema: supportValidation,
+    onSubmit: values => {
+      handleSubmit(values)
+    }
+  });
+
+  const handleSubmit = async (enquiry_info) => {
+    handleSendEmail(enquiry_info, false, formik)
+  }
   const [showSkeleton, setShowSkeleton] = useState(true);
   const [showImage, setShowImage] = useState(false);
   useEffect(() => {
@@ -105,25 +117,45 @@ const ContactUsPage = () => {
           whileInView={{ opacity: 1, x: "0%" }}
           transition={{ duration: 0.3, ease: "easeIn" }}
         >
-          <form className='p-4'>
-            <div className="input-group input-group-md mb-3">
-              <input type="text" className="form-control" id="name" placeholder='Name*' />
+          <form>
+            <div className="mb-3">
+              <input type="text" className={(formik.errors.name && formik.touched.name) ? "form-control error" : "form-control"} id="name" placeholder='Name*'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.name}
+              />
             </div>
-            <div className="input-group input-group-md mb-3">
-              <input type="text" className="form-control" id="email" placeholder='Email*' />
+            <div className="mb-3">
+              <input type="text" className={(formik.errors.email && formik.touched.email) ? "form-control error" : "form-control"} id="email" placeholder='Email*'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+              />
             </div>
-            <div className="input-group input-group-md mb-3">
-              <input type="text" className="form-control" id="phone" placeholder='Phone*' />
+            <div className="mb-3">
+              <input type="text" className={(formik.errors.phone && formik.touched.phone) ? "form-control error" : "form-control"} id="phone" placeholder='Phone*'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.phone}
+              />
             </div>
-            <div className="input-group input-group-md mb-3">
-              <input type="text" className="form-control" id="interested-products" placeholder='Interested Products' />
+            <div className="mb-3">
+              <input type="text" className={(formik.errors.interested_products && formik.touched.interested_products) ? "form-control error" : "form-control"} id="interested_products" placeholder='Interested Products*'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.interested_products}
+              />
             </div>
-            <div className="input-group input-group-md mb-3">
-              <textarea className="form-control" id="message-text inputGroup-sizing-lg" placeholder='Message'></textarea>
+            <div className="mb-3">
+              <textarea className={(formik.errors.message && formik.touched.message) ? "form-control error" : "form-control"} id="message" placeholder='Message*'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.message}
+              ></textarea>
             </div>
           </form>
           <div className="modal-footer d-flex justify-content-center">
-            <button type="button" className="btn btn-danger">Send message</button>
+            <button type="button" className="btn btn-danger" onClick={formik.handleSubmit}>Send message</button>
           </div>
         </m.div>
 

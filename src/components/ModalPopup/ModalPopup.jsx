@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react'
 import './ModalPopup.css'
+import { useFormik } from 'formik';
+import { supportValidation } from '../../utils/validationSchema';
+import toast from 'react-hot-toast';
+import { handleSendEmail } from '../../utils/EmailService';
 const ModalPopup = () => {
     useEffect(() => {
         const isFirstVisit = localStorage.getItem('isFirstVisit');
@@ -15,6 +19,24 @@ const ModalPopup = () => {
         }
     }, []);
 
+    const formik = useFormik({
+        initialValues: {
+            name: "",
+            email: "",
+            phone: "",
+            interested_products: "",
+            message: ""
+        },
+        validationSchema: supportValidation,
+        onSubmit: values => {
+            handleSubmit(values)
+        }
+    });
+    
+    const handleSubmit = async (enquiry_info) => {
+        handleSendEmail(enquiry_info, true)
+    }
+
     return (
         <>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -27,24 +49,44 @@ const ModalPopup = () => {
                         <div className="modal-body">
                             <form>
                                 <div className="mb-3">
-                                    <input type="text" className="form-control" id="name" placeholder='Name*'/>
+                                    <input type="text" className= {(formik.errors.name && formik.touched.name)? "form-control error": "form-control"} id="name" placeholder='Name*'
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.name}
+                                    />
                                 </div>
                                 <div className="mb-3">
-                                    <input type="text" className="form-control" id="email" placeholder='Email*'/>
+                                    <input type="text" className={(formik.errors.email && formik.touched.email)? "form-control error": "form-control"} id="email" placeholder='Email*'
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.email}
+                                    />
                                 </div>
                                 <div className="mb-3">
-                                    <input type="text" className="form-control" id="phone" placeholder='Phone*'/>
+                                    <input type="text" className={(formik.errors.phone && formik.touched.phone)? "form-control error": "form-control"} id="phone" placeholder='Phone*'
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.phone}
+                                    />
                                 </div>
                                 <div className="mb-3">
-                                    <input type="text" className="form-control" id="interested-products" placeholder='Interested Products'/>
+                                    <input type="text" className={(formik.errors.interested_products && formik.touched.interested_products)? "form-control error": "form-control"} id="interested_products" placeholder='Interested Products*'
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.interested_products}
+                                    />
                                 </div>
                                 <div className="mb-3">
-                                    <textarea className="form-control" id="message-text inputGroup-sizing-lg" placeholder='Message'></textarea>
+                                    <textarea className={(formik.errors.message && formik.touched.message)? "form-control error": "form-control"} id="message" placeholder='Message*'
+                                        onChange={formik.handleChange}
+                                        onBlur={formik.handleBlur}
+                                        value={formik.values.message}
+                                    ></textarea>
                                 </div>
                             </form>
                         </div>
                         <div className="modal-footer d-flex justify-content-center mb-3">
-                            <button type="button" className="btn btn-primary">Send message</button>
+                            <button type="button" className="btn btn-primary" onClick={formik.handleSubmit}>Send message</button>
                         </div>
                     </div>
                 </div>
