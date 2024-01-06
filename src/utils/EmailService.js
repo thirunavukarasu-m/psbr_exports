@@ -18,7 +18,7 @@ const emailTemplate = (data) => `
 
 export const handleSendEmail = async (values, redirect, formik = false) => {
   const user_email = values.email
-  const psbr_email = "thirunavukarasu.muthuvenkatesan@capillarytech.com"
+  const psbr_email = "psbrexports.in@gmail.com"
   try {
     const apiUrl = 'https://psbr-exports.onrender.com/send-email';
     const payload = {
