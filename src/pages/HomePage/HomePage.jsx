@@ -79,10 +79,10 @@ const HomePage = () => {
           <h1 className='text-center pt-4 blue-text fs-1'> Our Products </h1>
           <div className="products-card-container d-flex pt-4 mb-5">
             {
-              products.map((product) => {
+              products.map((product, index) => {
                 return (
                   <>
-                    <ProductCard product={product} />
+                    <ProductCard product={product} index={index}/>
                   </>
                 )
               })

@@ -1,3 +1,16 @@
 .pages {
     margin-top: 150px;
 }
+
+.whatsApp > a > img {
+    height: 85px;
+    width: 85px;
+}
+
+
+@media (max-width: 762px) {
+    .whatsApp> a > img{
+        height: 55px;
+        width: 55px;
+    }
+}

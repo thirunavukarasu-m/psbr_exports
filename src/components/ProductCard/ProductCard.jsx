@@ -5,7 +5,7 @@ import SkeletonLoader from '../SkeletonLoader/SkeletonLoader'
 import { motion as m } from 'framer-motion'
 
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, index }) => {
     const [showSkeleton, setShowSkeleton] = useState(true);
     const [showImage, setShowImage] = useState(false);
     const scrollToTop = () => {
@@ -44,7 +44,7 @@ const ProductCard = ({ product }) => {
                     <m.div className="product-card"
                         initial={{ opacity: 0,x:"100%" }}
                         whileInView={{ opacity: 1,x:"0%" }}
-                        transition={{ duration: 0.75, ease: "easeOut",delay:0.4 }}
+                        transition={{ duration: 0.75, ease: "easeOut",delay:index * 0.2 }}
                         viewport={{ once: true }}
                     >
                         <h3 className='text-center fs-3 pt-2 blue-text'>{product.heading}</h3>

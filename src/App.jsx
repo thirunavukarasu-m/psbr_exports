@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage/HomePage';
 import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
@@ -8,14 +8,14 @@ import Footer from './components/Footer/Footer';
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import { AnimatePresence } from 'framer-motion';
 import PageTransition from './utils/PageTransition';
-
+import whatsApp from './assets/whatsapp-logo.png'
 
 function App() {
   return (
     <>
       <Router>
         <MainNavbar />
-        <div className="pages">
+        <div className="pages position-relative">
           <AnimatePresence mode='wait'>
             <Routes>
               <Route
@@ -36,6 +36,11 @@ function App() {
               />
             </Routes>
           </AnimatePresence>
+          <div className="fixed-bottom p-3 w-100 d-flex justify-content-end whatsApp">
+            <Link to={'https://wa.me/message/AUKBGAFITFRAJ1?src=qr'} target="_blank" rel="noopener noreferrer">
+              <img src={whatsApp} alt="whatsApp logo" />
+            </Link>
+          </div>
         </div>
         <Footer />
       </Router>

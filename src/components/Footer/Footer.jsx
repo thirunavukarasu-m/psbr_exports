@@ -1,10 +1,8 @@
 import React from 'react'
 import logo from "../../assets/psbr_bg_removed.png"
 import facebook from "../../assets/social-icons/facebook.png"
-import youtube from "../../assets/social-icons/youtube.png"
-import threads from "../../assets/social-icons/threads.png"
 import instagram from "../../assets/social-icons/instagram.png"
-import linkedIn from "../../assets/social-icons/linkedIn.png"
+import x from "../../assets/social-icons/x.png"
 import { Link } from 'react-router-dom'
 import './Footer.css'
 
@@ -20,12 +18,16 @@ const Footer = () => {
       <div className="footer-container p-5 d-flex justify-content-center align-items-start">
         <div className="footer-contact-info d-flex justify-content-center align-items-center flex-column">
           <img src={logo} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
-          <div className="d-flex justify-content-center align-items-center social-icons pt-3">
-            <img src={facebook} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
-            <img src={youtube} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
-            <img src={threads} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
-            <img src={instagram} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
-            <img src={linkedIn} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
+          <div className="d-flex justify-content-center align-items-center social-icons pb-3">
+            <Link to={'https://www.facebook.com/profile.php?id=61555495640843&mibextid=ZbWKwL'} target="_blank" rel="noopener noreferrer">
+              <img src={facebook} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' height={35} width={35} />
+            </Link>
+            <Link to={'https://x.com/psbrexports?t=mimBosrtQqRrbdqkjQiHrA&s=09'} target="_blank" rel="noopener noreferrer">
+              <img src={x} alt="PSBR Exports logo" loading="lazy" className='psbr-logo'  height={35} width={35}/>
+            </Link>
+            <Link to={'https://www.instagram.com/psbrexports?igsh=OGQ5ZDc2ODk2ZA=='} target="_blank" rel="noopener noreferrer">
+              <img src={instagram} alt="PSBR Exports logo" loading="lazy" className='psbr-logo'  height={35} width={35}/>
+            </Link>
           </div>
           <p className='m-0 fw-bold pt-2 text-dark'>Phone:</p>
           <p className='m-0 fw-bold pt-2 text-dark'>8610393469</p>
