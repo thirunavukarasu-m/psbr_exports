@@ -45,6 +45,7 @@ const ProductCard = ({ product }) => {
                         initial={{ opacity: 0,x:"100%" }}
                         whileInView={{ opacity: 1,x:"0%" }}
                         transition={{ duration: 0.75, ease: "easeOut",delay:0.4 }}
+                        viewport={{ once: true }}
                     >
                         <h3 className='text-center fs-3 pt-2 blue-text'>{product.heading}</h3>
                         <img src={product.img} alt="" />
