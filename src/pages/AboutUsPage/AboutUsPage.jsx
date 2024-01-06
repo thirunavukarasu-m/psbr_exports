@@ -120,46 +120,54 @@ const AboutUsPage = () => {
         <div className="why-choose-us-container p-5 mt-5 bg-dark-blue">
           <h1 className='text-dark fw-bold text-center text-white'> Why Choose Us</h1>
           <div className="why-choose-us-cards d-flex mt-5 mb-5">
-            <m.div className="why-choose-us-card p-3 mt-2" 
-             initial={{ opacity: 0, y: "100%" }}
-             whileInView={{ opacity: 1, y: "0%" }}
-             transition={{ duration: 0.3, ease: "easeIn", delay:0.1 }}
-            >
-              <img src={world} alt="" height={70} width={70} />
-              <p className='text-center'>
-                An internal team of qualified and experienced individuals handles sourcing. We make sure that our customers receive premium-quality ingredients from the appropriate sources.
-              </p>
-            </m.div>
-            <m.div className="why-choose-us-card p-3 mt-2"
-             initial={{ opacity: 0, y: "100%" }}
-             whileInView={{ opacity: 1, y: "0%" }}
-             transition={{ duration: 0.3, ease: "easeIn", delay:0.3 }}
-            >
-              <img src={tick} alt="" height={70} width={70} />
-              <p className='text-center'>
-                An internal team of qualified and experienced individuals handles sourcing. We make sure that our customers receive premium-quality ingredients from the appropriate sources.
-              </p>
-            </m.div>
-            <m.div className="why-choose-us-card p-3 mt-2"
-             initial={{ opacity: 0, y: "100%" }}
-             whileInView={{ opacity: 1, y: "0%" }}
-             transition={{ duration: 0.3, ease: "easeIn", delay:0.5 }}
-            >
-              <img src={cart} alt="" height={70} width={70} />
-              <p className='text-center'>
-                An internal team of qualified and experienced individuals handles sourcing. We make sure that our customers receive premium-quality ingredients from the appropriate sources.
-              </p>
-            </m.div>
-            <m.div className="why-choose-us-card p-3 mt-2"
-              initial={{ opacity: 0, y: "100%" }}
-              whileInView={{ opacity: 1, y: "0%" }}
-              transition={{ duration: 0.3, ease: "easeIn", delay:0.7 }}
-            >
-              <img src={triangle} alt="" height={70} width={70} />
-              <p className='text-center'>
-                An internal team of qualified and experienced individuals handles sourcing. We make sure that our customers receive premium-quality ingredients from the appropriate sources.
-              </p>
-            </m.div>
+            <div className="overflow-hidden p-1">
+              <m.div className="why-choose-us-card p-3 mt-2"
+                initial={{ opacity: 0, y: "100%" }}
+                whileInView={{ opacity: 1, y: "0%" }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 0.1 }}
+              >
+                <img src={world} alt="" height={70} width={70} />
+                <p className='text-center'>
+                  An internal team of qualified and experienced individuals handles sourcing. We make sure that our customers receive premium-quality ingredients from the appropriate sources.
+                </p>
+              </m.div>
+            </div>
+            <div className="overflow-hidden p-1">
+              <m.div className="why-choose-us-card p-3 mt-2"
+                initial={{ opacity: 0, y: "100%" }}
+                whileInView={{ opacity: 1, y: "0%" }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 0.3 }}
+              >
+                <img src={tick} alt="" height={70} width={70} />
+                <p className='text-center'>
+                  An internal team of qualified and experienced individuals handles sourcing. We make sure that our customers receive premium-quality ingredients from the appropriate sources.
+                </p>
+              </m.div>
+            </div>
+            <div className="overflow-hidden p-1">
+              <m.div className="why-choose-us-card p-3 mt-2"
+                initial={{ opacity: 0, y: "100%" }}
+                whileInView={{ opacity: 1, y: "0%" }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 0.5 }}
+              >
+                <img src={cart} alt="" height={70} width={70} />
+                <p className='text-center'>
+                  An internal team of qualified and experienced individuals handles sourcing. We make sure that our customers receive premium-quality ingredients from the appropriate sources.
+                </p>
+              </m.div>
+            </div>
+            <div className="overflow-hidden p-1">
+              <m.div className="why-choose-us-card p-3 mt-2"
+                initial={{ opacity: 0, y: "100%" }}
+                whileInView={{ opacity: 1, y: "0%" }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 0.7 }}
+              >
+                <img src={triangle} alt="" height={70} width={70} />
+                <p className='text-center'>
+                  An internal team of qualified and experienced individuals handles sourcing. We make sure that our customers receive premium-quality ingredients from the appropriate sources.
+                </p>
+              </m.div>
+            </div>
           </div>
         </div>
       </m.div>
