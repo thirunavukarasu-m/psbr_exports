@@ -4,16 +4,11 @@ import toast from "react-hot-toast";
 
 
 const emailTemplate = (data) => `
-  <html>
-    <body>
-      <h2>New Inquiry Received</h2>
-      <p><strong>Name:</strong> ${data.name}</p>
-      <p><strong>Email:</strong> ${data.email}</p>
-      <p><strong>Phone:</strong> ${data.phone}</p>
-      <p><strong>Interested Products:</strong> ${data.interested_products}</p>
-      <p><strong>Message:</strong> ${data.message}</p>
-    </body>
-  </html>
+  Name : ${data.name}
+  Email : ${data.email}
+  Phone : ${data.phone}
+  Interested Products: ${data.interested_products}
+  Message : ${data.message}
 `;
 
 export const handleSendEmail = async (values, redirect, formik = false) => {
