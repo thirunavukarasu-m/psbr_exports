@@ -41,9 +41,9 @@ const Footer = () => {
           </h1>
           <div className="quick-links-footer d-flex flex-column justify-content-center align-items-center">
             <Link to="/" onClick={scrollToTop}>Home</Link>
-            <Link to="/about-us" onClick={scrollToTop}>About Us</Link>
-            <Link to="/contact-us" onClick={scrollToTop}>Contact Us</Link>
-            <Link to="/products" onClick={scrollToTop}>Our Products</Link>
+            <Link to="/about-us/" onClick={scrollToTop}>About Us</Link>
+            <Link to="/contact-us/" onClick={scrollToTop}>Contact Us</Link>
+            <Link to="/products/" onClick={scrollToTop}>Our Products</Link>
           </div>
         </div>
         <div className="our-products-footer-container mt-5">

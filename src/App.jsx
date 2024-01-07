@@ -23,15 +23,15 @@ function App() {
                 element={<PageTransition><HomePage /></PageTransition>}
               />
               <Route
-                path="/products"
+                path="/products/"
                 element={<PageTransition><ProductsPage /></PageTransition>}
               />
               <Route
-                path="/about-us"
+                path="/about-us/"
                 element={<PageTransition><AboutUsPage /></PageTransition>}
               />
               <Route
-                path="/contact-us"
+                path="/contact-us/"
                 element={<PageTransition><ContactUsPage /></PageTransition>}
               />
             </Routes>

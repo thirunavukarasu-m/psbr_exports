@@ -12,16 +12,9 @@ const emailTemplate = (data) => `
 `;
 
 export const handleSendEmail = async (values, redirect, formik = false) => {
-  const user_email = values.email
   const psbr_email = "psbrexports.in@gmail.com"
   try {
     const apiUrl = 'https://psbr-exports.onrender.com/send-email';
-    const payload = {
-      to: user_email,
-      subject: 'Thank you for reaching out.',
-      message: 'We will get back to you as soon as possible.',
-    };
-    const promise = axios.post(apiUrl, payload);
     const psbr_payload = {
       to: psbr_email,
       subject: `User Enquiry`,
@@ -33,7 +26,7 @@ export const handleSendEmail = async (values, redirect, formik = false) => {
       if (redirect) {
         setTimeout(() => {
           window.location.href = '/';
-        }, 2000)
+        }, 1000)
       } else {
         formik.resetForm()
       }

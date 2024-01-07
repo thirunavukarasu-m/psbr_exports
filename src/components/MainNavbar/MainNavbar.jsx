@@ -5,7 +5,6 @@ import logo from "../../assets/psbr_bg_removed.png"
 import hamburger from "../../assets/menu.png"
 import ModalPopup from '../ModalPopup/ModalPopup'
 import useWindowSize from '../../utils/useWindowSize'
-import { motion as m } from 'framer-motion'
 
 const MainNavbar = () => {
   const scrollToTop = () => {
@@ -66,13 +65,13 @@ const MainNavbar = () => {
                 <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/"}>Home</Link>
               </li>
               <li>
-                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/products"}>Products</Link>
+                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/products/"}>Products</Link>
               </li>
               <li>
-                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/about-us"}>About Us</Link>
+                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/about-us/"}>About Us</Link>
               </li>
               <li>
-                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/contact-us"}>Contact Us</Link>
+                <Link onClick={scrollToTop} className="nav-link" aria-current="page" to={"/contact-us/"}>Contact Us</Link>
               </li>
               <li>
                 <button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#exampleModal">Request Quote</button>
