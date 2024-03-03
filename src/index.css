@@ -39,7 +39,12 @@ a {
   padding-bottom: 150px!important;
 }
 
-
+.font-20-px {
+  font-size: 20px;
+}
+.font-80-px {
+  font-size: 80px;
+}
 .font-5 {
   font-size: 5rem;
 }
@@ -51,6 +56,12 @@ a {
 @media (max-width: 762px) {
   p {
     font-size: 16px;
+  }
+  .font-20-px {
+    font-size: 20px;
+  }
+  .font-80-px {
+    font-size: 48px;
   }
 }
 

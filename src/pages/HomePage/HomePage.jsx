@@ -14,6 +14,7 @@ import tamarind from '../../assets/products/tamarind.jpg'
 import turmaric from '../../assets/products/turmaric.jpg'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import { motion as m } from 'framer-motion'
+import BannerVideo from '../../components/BannerVideo/BannerVideo'
 
 const HomePage = () => {
   const products = [
@@ -68,7 +69,8 @@ const HomePage = () => {
         transition={{ duration: 0.75, ease: "easeOut",delay:0.4 }}
       >
         <div className="overflow-hidden">
-          <Banner />
+          {/* <Banner /> */}
+          <BannerVideo/>
         </div>
         <div className='pb-5' style={{ backgroundColor: "#004A8D" }}>
           <h1 className='text-center pt-5 orange-color text-white fs-1 fw-bold'> Who we are</h1>
