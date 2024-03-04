@@ -113,7 +113,7 @@ const MainNavbar = () => {
       const currentScrollPos = window.pageYOffset;
       const scrollYPosition = window.scrollY;
       setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setVisibleBgLight(scrollYPosition > 710);
+      setVisibleBgLight(scrollYPosition > 350);
       setPrevScrollPos(currentScrollPos);
     };
     window.addEventListener('scroll', handleScroll);
