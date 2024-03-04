@@ -23,10 +23,10 @@ const Footer = () => {
               <img src={facebook} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' height={25} width={25} />
             </Link>
             <Link to={'https://x.com/psbrexports?t=mimBosrtQqRrbdqkjQiHrA&s=09'} target="_blank" rel="noopener noreferrer">
-              <img src={x} alt="PSBR Exports logo" loading="lazy" className='psbr-logo'  height={25} width={25}/>
+              <img src={x} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' height={25} width={25} />
             </Link>
             <Link to={'https://www.instagram.com/psbrexports?igsh=OGQ5ZDc2ODk2ZA=='} target="_blank" rel="noopener noreferrer">
-              <img src={instagram} alt="PSBR Exports logo" loading="lazy" className='psbr-logo'  height={25} width={25}/>
+              <img src={instagram} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' height={25} width={25} />
             </Link>
           </div>
           <p className='m-0 fw-bold pt-2 text-dark'>Phone:</p>
@@ -36,33 +36,30 @@ const Footer = () => {
 
         </div>
         <div className="quick-links-footer-container mt-5">
-          <h1 className='fw-bold blue-text fs-1'>
+          <h1 className='fw-bold blue-text font-25-px'>
             Quick Links
           </h1>
-          <div className="quick-links-footer d-flex flex-column justify-content-center align-items-start">
-            <Link to="/" onClick={scrollToTop}>Home</Link>
-            <Link to="/about-us/" onClick={scrollToTop}>About Us</Link>
-            <Link to="/contact-us/" onClick={scrollToTop}>Contact Us</Link>
-            <Link to="/products/" onClick={scrollToTop}>Our Products</Link>
+          <div className="quick-links-footer d-flex flex-column align-items-start">
+            <Link to="/" onClick={scrollToTop} className='font-20-px'>Home</Link>
+            <Link to="/about-us/" onClick={scrollToTop} className='font-20-px'>About Us</Link>
+            <Link to="/contact-us/" onClick={scrollToTop} className='font-20-px'>Contact Us</Link>
+            <Link to="/products/" onClick={scrollToTop} className='font-20-px'>Our Products</Link>
           </div>
         </div>
         <div className="our-products-footer-container mt-5">
-          <h1 className='fw-bold blue-text fs-1 text-center'>
+          <h1 className='fw-bold blue-text text-center font-25-px'>
             Our Products
           </h1>
-          <div className="our-products-footer d-flex justify-content-center align-items-center">
-            <div className='our-products-footer-part-one d-flex flex-column justify-content-start align-items-start'>
-              <Link to="/products#Cumin">Cumin</Link>
-              <Link to="/products#Cloves">Cloves</Link>
-              <Link to="/products#Tamarind">Tamarind</Link>
-              <Link to="/products#Coriander">Coriander</Link>
-              <Link to="/products#Cinnamon">Cinnamon</Link>
-              <Link to="/products#Turmeric" >Turmeric</Link>
-              <Link to="/products#Cardamom">Cardamom</Link>
-              <Link to="/products#chilli" >Red Chilli</Link>
-              <Link to="/products#Pepper">Black Pepper</Link>
-            </div>
-            
+          <div className="our-products-footer d-flex flex-column justify-content-center align-items-start">
+            <Link to="/products#Cumin" className='font-20-px'>Cumin</Link>
+            <Link to="/products#Cloves" className='font-20-px'>Cloves</Link>
+            <Link to="/products#Tamarind" className='font-20-px'>Tamarind</Link>
+            <Link to="/products#Coriander" className='font-20-px'>Coriander</Link>
+            <Link to="/products#Cinnamon" className='font-20-px'>Cinnamon</Link>
+            <Link to="/products#Turmeric" className='font-20-px' >Turmeric</Link>
+            <Link to="/products#Cardamom" className='font-20-px'>Cardamom</Link>
+            <Link to="/products#chilli"className='font-20-px' >Red Chilli</Link>
+            <Link to="/products#Pepper" className='font-20-px'>Black Pepper</Link>
           </div>
         </div>
       </div>
