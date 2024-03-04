@@ -15,6 +15,7 @@ import turmaric from '../../assets/products/turmaric.jpg'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import { motion as m } from 'framer-motion'
 import BannerVideo from '../../components/BannerVideo/BannerVideo'
+import HeadingDecorator from '../../components/HeadingDecorator/HeadingDecorator'
 
 const HomePage = () => {
   const products = [
@@ -66,25 +67,28 @@ const HomePage = () => {
       <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.75, ease: "easeOut",delay:0.4 }}
+        transition={{ duration: 0.75, ease: "easeOut", delay: 0.4 }}
       >
         <div className="overflow-hidden">
           {/* <Banner /> */}
-          <BannerVideo/>
+          <BannerVideo />
         </div>
-        <div className='pb-5' style={{ backgroundColor: "#004A8D" }}>
-          <h1 className='text-center pt-5 orange-color text-white fs-1 fw-bold'> Who we are</h1>
-          <SingleProductInfo product={psbr_exports} page={"home"} />
+        <div className='pb-5'>
+          {/* <h1 className='text-center pt-5 orange-color text-white fs-1 fw-bold'> Who we are</h1> */}
+          <SingleProductInfo product={psbr_exports} page={{ type: "normal", text: "Who we are" }} />
         </div>
         <div className="bg-light p-3 mt-5 pb-5">
-          <h2 className='text-center pt-5 blue-text fs-1'> Explore </h2>
-          <h1 className='text-center pt-4 blue-text fs-1'> Our Products </h1>
+          {/* <h2 className='text-center pt-5 blue-text fs-1'> Explore </h2> */}
+          <div className="d-flex justify-content-center">
+            <HeadingDecorator page={{ type: "normal", text: "Explore" }} />
+          </div>
+          <h1 className='text-center pt-4 blue-text font-40-px'> Our Products </h1>
           <div className="products-card-container d-flex pt-4 mb-5">
             {
               products.map((product, index) => {
                 return (
                   <>
-                    <ProductCard product={product} index={index}/>
+                    <ProductCard product={product} index={index} />
                   </>
                 )
               })

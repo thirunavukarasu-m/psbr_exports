@@ -1,0 +1,12 @@
+.heading-decorator {
+    gap: 0.5rem;
+    hr {
+        width: 30px;
+    }
+    p {
+        color: red;
+        font-weight: 200;
+    }
+    
+
+}

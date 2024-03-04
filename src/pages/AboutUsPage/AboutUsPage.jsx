@@ -12,6 +12,7 @@ import world from '../../assets/world.png'
 import about_us_ship from "../../assets/about-us-ship.jpg"
 import { motion as m } from 'framer-motion'
 import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader'
+import HeadingDecorator from '../../components/HeadingDecorator/HeadingDecorator'
 
 const AboutUsPage = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
@@ -49,7 +50,7 @@ const AboutUsPage = () => {
   }
   return (
     <>
-      <m.div className="about-us-container mt-3 mb-5"
+      <m.div className="about-us-container mb-5"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut", delay: 0.4 }}
@@ -77,20 +78,25 @@ const AboutUsPage = () => {
           </div>
         )}
 
-        <SingleProductInfo product={about_us} index={1} />
+        <SingleProductInfo product={about_us} index={1} page={{ type: "normal", text: "We are" }} />
         <div className="bg-dark-blue mt-5">
           <SingleProductInfo product={about_the_founder} page={"home"} index={2} />
 
-          <div className="p-5">
-            <p>
-              PSBR Exports’ main focus is on providing quality, consistency and reliability to our customers. Our team of passionate and energetic professional are committed to source and deliver the best products and services to our customers in a timely and cost-effective manner. Our commitment to quality and customer service has enabled us to establish long-term relationships with our clients and we strive to exceed their expectations with every shipment.
-            </p>
-            <p>
-              As part of PSBR Exports the Herbal products division was established as AGAN HERBALS. At Agan Herbals, we believe that nature is the key to true beauty and health. We are committed to providing products that are 100% natural and herbal, free of harmful chemicals, and are dermatologically tested and safe to use. Our wide range of Hair Care, Skin Care, Health Care, and Oral Care products are made from the finest ingredients, to ensure our customers get the optimal health and beauty they deserve. We are passionate about helping people achieve their health and beauty goals, and make sure we provide the highest quality products and services that exceed customer expectations.
-            </p>
+          <div className="p-5 d-flex flex-column align-items-center">
+            <div className="w-75">
+              <p>
+                PSBR Exports’ main focus is on providing quality, consistency and reliability to our customers. Our team of passionate and energetic professional are committed to source and deliver the best products and services to our customers in a timely and cost-effective manner. Our commitment to quality and customer service has enabled us to establish long-term relationships with our clients and we strive to exceed their expectations with every shipment.
+              </p>
+              <p>
+                As part of PSBR Exports the Herbal products division was established as AGAN HERBALS. At Agan Herbals, we believe that nature is the key to true beauty and health. We are committed to providing products that are 100% natural and herbal, free of harmful chemicals, and are dermatologically tested and safe to use. Our wide range of Hair Care, Skin Care, Health Care, and Oral Care products are made from the finest ingredients, to ensure our customers get the optimal health and beauty they deserve. We are passionate about helping people achieve their health and beauty goals, and make sure we provide the highest quality products and services that exceed customer expectations.
+              </p>
+            </div>
           </div>
         </div>
         <div className="mission-and-vision p-5">
+          <div className="w-100 d-flex justify-content-center">
+            <HeadingDecorator page={{ type: "normal", text: "Our" }} />
+          </div>
           <h1 className='text-center fw-bold'>
             Mission and Vision
           </h1>
@@ -98,7 +104,8 @@ const AboutUsPage = () => {
             <m.div className="mv-content p-4 mt-5"
               initial={{ opacity: 0, x: "-100%" }}
               whileInView={{ opacity: 1, x: "0%" }}
-              transition={{ duration: 0.3, ease: "easeIn" }}
+              transition={{ duration: 0.3, ease: "easeIn", delay: 0.7 }}
+              viewport={{ once: true }}
             >
               <img src={target} alt="" height={70} width={70} />
               <p className='text-dark'>
@@ -108,7 +115,9 @@ const AboutUsPage = () => {
             <m.div className="mv-content p-4 mt-5"
               initial={{ opacity: 0, x: "100%" }}
               whileInView={{ opacity: 1, x: "0%" }}
-              transition={{ duration: 0.3, ease: "easeIn" }}
+              transition={{ duration: 0.3, ease: "easeIn", delay: 0.7 }}
+              viewport={{ once: true }}
+
             >
               <img src={focus} alt="" height={70} width={70} />
               <p className='text-dark'>
@@ -117,7 +126,10 @@ const AboutUsPage = () => {
             </m.div>
           </div>
         </div>
-        <div className="why-choose-us-container p-5 mt-5 bg-dark-blue">
+        <div className="why-choose-us-container p-5 mt-5 bg-dark">
+        <div className="w-100 d-flex justify-content-center">
+            <HeadingDecorator page={{ type: "normal", text: "WE STAND OUT FROM THE REST" }} />
+          </div>
           <h1 className='text-dark fw-bold text-center text-white'> Why Choose Us</h1>
           <div className="why-choose-us-cards d-flex mt-5 mb-5">
             <div className="overflow-hidden p-1">
@@ -136,7 +148,7 @@ const AboutUsPage = () => {
               <m.div className="why-choose-us-card p-3 mt-2"
                 initial={{ opacity: 0, y: "100%" }}
                 whileInView={{ opacity: 1, y: "0%" }}
-                transition={{ duration: 0.3, ease: "easeIn", delay: 0.3 }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 0.5 }}
               >
                 <img src={tick} alt="" height={70} width={70} />
                 <p className='text-center'>
@@ -148,7 +160,7 @@ const AboutUsPage = () => {
               <m.div className="why-choose-us-card p-3 mt-2"
                 initial={{ opacity: 0, y: "100%" }}
                 whileInView={{ opacity: 1, y: "0%" }}
-                transition={{ duration: 0.3, ease: "easeIn", delay: 0.5 }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 1 }}
               >
                 <img src={cart} alt="" height={70} width={70} />
                 <p className='text-center'>
@@ -160,7 +172,7 @@ const AboutUsPage = () => {
               <m.div className="why-choose-us-card p-3 mt-2"
                 initial={{ opacity: 0, y: "100%" }}
                 whileInView={{ opacity: 1, y: "0%" }}
-                transition={{ duration: 0.3, ease: "easeIn", delay: 0.7 }}
+                transition={{ duration: 0.3, ease: "easeIn", delay: 1.5 }}
               >
                 <img src={triangle} alt="" height={70} width={70} />
                 <p className='text-center'>

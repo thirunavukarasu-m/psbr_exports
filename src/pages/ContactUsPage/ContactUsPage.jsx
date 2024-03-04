@@ -9,6 +9,7 @@ import SkeletonLoader from '../../components/SkeletonLoader/SkeletonLoader'
 import { useFormik } from 'formik'
 import { supportValidation } from '../../utils/validationSchema'
 import { handleSendEmail } from '../../utils/EmailService'
+import HeadingDecorator from '../../components/HeadingDecorator/HeadingDecorator'
 
 
 
@@ -52,7 +53,7 @@ const ContactUsPage = () => {
     }
   }, []);
   return (
-    <m.div className="contact-us-container mt-3 mb-5"
+    <m.div className="contact-us-container mb-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75, ease: "easeOut", delay: 0.4 }}
@@ -79,13 +80,19 @@ const ContactUsPage = () => {
         </div>
       )}
 
-      <h1 className='text-dark p-4 text-center fw-bold'> Get In Touch</h1>
-      <div className="contact-us-cards bg-dark-blue d-flex p-4">
+      {/* <h1 className='text-dark p-4 text-center fw-bold'> Get In Touch</h1> */}
+      <div className="w-100 d-flex justify-content-center">
+        <HeadingDecorator page={{ type: "normal", text: "Get in touch" }} />
+      </div>
+      <div className="contact-us-cards d-flex p-4">
+
         <m.div className="contact-us-card p-4"
           initial={{ opacity: 0, x: "-100%" }}
           whileInView={{ opacity: 1, x: "0%" }}
-          transition={{ duration: 0.3, ease: "easeIn" }}
+          transition={{ duration: 0.25, ease: "easeIn", delay: 1 }}
+          viewport={{ once: true }}
         >
+
           <div className="contact-type">
             <img src={email} alt="" height={30} width={30} />
             <div className="contact-content">
@@ -115,7 +122,8 @@ const ContactUsPage = () => {
         <m.div className="contact-us-card p-5"
           initial={{ opacity: 0, x: "100%" }}
           whileInView={{ opacity: 1, x: "0%" }}
-          transition={{ duration: 0.3, ease: "easeIn" }}
+          transition={{ duration: 0.25, ease: "easeIn", delay: 1 }}
+          viewport={{ once: true }}
         >
           <form>
             <div className="mb-3">
@@ -164,7 +172,7 @@ const ContactUsPage = () => {
             initial={{ y: "100%" }}
             whileInView={{ y: "0%" }}
             exit={{ opacity: 1 }}
-            transition={{ duration: 0.25, ease: "easeOut", delay: 0.1 }}
+            transition={{ duration: 0.25, ease: "easeOut", delay: 0.5 }}
             viewport={{ once: true }}
           >
             <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3917.966119385119!2d76.907889!3d10.8901794!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDUzJzI0LjciTiA3NsKwNTQnMjguNCJF!5e0!3m2!1sen!2sin!4v1704443820387!5m2!1sen!2sin" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

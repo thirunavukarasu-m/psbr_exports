@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './SingleProductInfo.css'
 import SkeletonLoader from '../SkeletonLoader/SkeletonLoader';
 import { motion as m } from 'framer-motion'
-
-const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+import HeadingDecorator from '../HeadingDecorator/HeadingDecorator';
 
 
 const SingleProductInfo = ({ product, index, page }) => {
@@ -34,45 +32,35 @@ const SingleProductInfo = ({ product, index, page }) => {
 
     return (
         <>
-            <div className={index % 2 !== 0 ? "single-product-view-container pt-5" : "single-product-view-container pt-5 flex-row-reverse"}
+            <m.div className={index % 2 !== 0 ? "single-product-view-container pt-5" : "single-product-view-container pt-5 flex-row-reverse"}
+                initial={{ y: "50%" }}
+                whileInView={{ opacity: 1, y: "0%" }}
+                transition={{ duration: 0.4, ease: "easeIn", delay: 0.5 }}
+                viewport={{ once: true }}
             >
-                <div className="overflow-hidden">
-                    <m.div className="product-img" id={product.heading.split(" ")[1] ? product.heading.split(" ")[1] : product.heading}
-                        // initial={{ x: index % 2 !== 0 ? "20%" : "-20%" }}
-                        // whileInView={{ opacity: 1, x: "0%" }}
-                        // transition={{ duration: 0.3, ease: "easeIn" }}
-                        // viewport={{ once: true }}
-                        // initial={false}
-                        whileInView={
-                            (showImage)
-                                ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
-                                : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
-                        }
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                <div className="overflow-hidden product-img-container">
+                    <div className="product-img" id={product.heading.split(" ")[1] ? product.heading.split(" ")[1] : product.heading}
                     >
                         {showSkeleton && <SkeletonLoader height={600} width={400} />}
-                        {showImage && <img src={product.img} alt=""/>}
-                    </m.div>
+                        {showImage && <img src={product.img} alt="" />}
+                    </div>
                 </div>
-                <m.div className="product-info"
-                    initial={{ x: index % 2 !== 0 ? "-20%" : "20%" }}
-                    whileInView={{ opacity: 1, x: "0%" }}
-                    transition={{ duration: 0.3, ease: "easeIn" }}
-                >
-                    <h2 className={page ? 'text-white fs-1 pb-3 fw-bold' : 'blue-text fs-1 pb-3 fw-bold'}>
+                <m.div className="product-info">
+                    <h2 className={page ? 'text-dark pb-3 fw-bold' : 'blue-text pb-3 fw-bold'}>
+                        <HeadingDecorator page={page} />
                         {product.heading}
                     </h2>
-                    <p className={page ? 'text-white m-0' : 'text-dark m-0'}>
+                    <p className={page ? 'text-dark' : 'text-dark'}>
                         {product.para_one && product.para_one}
                     </p>
-                    <p className={page ? 'text-white m-0' : 'text-dark m-0'} >
+                    <p className={page ? 'text-dark' : 'text-dark'} >
                         {product.para_two && product.para_two}
                     </p>
-                    <p className={page ? 'text-white m-0' : 'text-dark m-0'}>
+                    <p className={page ? 'text-dark' : 'text-dark'}>
                         {product.para_three && product.para_three}
                     </p>
                 </m.div>
-            </div>
+            </m.div>
         </>
     )
 }

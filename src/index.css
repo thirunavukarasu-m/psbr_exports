@@ -45,6 +45,9 @@ a {
 .font-80-px {
   font-size: 80px;
 }
+.font-40-px {
+  font-size: 40px;
+}
 .font-25-px {
   font-size: 25px;
 }
@@ -53,14 +56,14 @@ a {
 }
 
 .bg-dark-blue {
-  background-color: #004A8D;
+  background-color: #8c8c8c;
 }
 
 @media (max-width: 762px) {
   p {
     font-size: 16px;
   }
-  
+
   .font-80-px {
     font-size: 48px;
   }
