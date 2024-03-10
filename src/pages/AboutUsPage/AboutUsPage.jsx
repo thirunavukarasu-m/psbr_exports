@@ -83,7 +83,7 @@ const AboutUsPage = () => {
         <div className="bg-dark-blue mt-5 overflow-hidden">
           <SingleProductInfo product={about_the_founder} page={"home"} index={2} />
 
-          <div className="p-5 d-flex flex-column align-items-center">
+          <div className="p-3 d-flex flex-column align-items-center">
             <div className="w-75">
               <p>
                 PSBR Exports’ main focus is on providing quality, consistency and reliability to our customers. Our team of passionate and energetic professional are committed to source and deliver the best products and services to our customers in a timely and cost-effective manner. Our commitment to quality and customer service has enabled us to establish long-term relationships with our clients and we strive to exceed their expectations with every shipment.
