@@ -41,22 +41,22 @@ const SingleProductInfo = ({ product, index, page }) => {
                 <div className="overflow-hidden product-img-container">
                     <div className="product-img" id={product.heading.split(" ")[1] ? product.heading.split(" ")[1] : product.heading}
                     >
-                        {showSkeleton && <SkeletonLoader height={600} width={400} />}
-                        {showImage && <img src={product.img} alt="" />}
+                        {showSkeleton && <SkeletonLoader height={600} width={400} style={page.type === "home" ? {height : 300 + "px"} : {height:600 + "px"}}/>}
+                        {showImage && <img src={product.img} alt=""  />}
                     </div>
                 </div>
                 <m.div className="product-info">
-                    <h2 className={page ? 'text-dark pb-3 fw-bold' : 'blue-text pb-3 fw-bold'}>
+                    <h2 className={`${page === "home" || page.type ===  "normal" ? 'text-dark pb-3 fw-bold' : 'blue-text pb-3 fw-bold'} ${page.type ===  "about_founder" ? 'text-white font-40-px' : "text-dark"}` } >
                         <HeadingDecorator page={page} />
                         {product.heading}
                     </h2>
-                    <p className={page ? 'text-dark' : 'text-dark'}>
+                    <p className={` ${page === 'home' ? 'text-dark' : 'text-dark'} ${page.type==="about_founder" ? "text-white" : "text-dark"}`}>
                         {product.para_one && product.para_one}
                     </p>
-                    <p className={page ? 'text-dark' : 'text-dark'} >
+                    <p className={` ${page === 'home' ? 'text-dark' : 'text-dark'} ${page.type==="about_founder" ? "text-white" : "text-dark"}`} >
                         {product.para_two && product.para_two}
                     </p>
-                    <p className={page ? 'text-dark' : 'text-dark'}>
+                    <p className={` ${page === 'home' ? 'text-dark' : 'text-dark'} ${page.type==="about_founder" ? "text-white" : "text-dark"}`}>
                         {product.para_three && product.para_three}
                     </p>
                 </m.div>

@@ -123,7 +123,28 @@ const MainNavbar = () => {
     };
   }, [prevScrollPos]);
 
+  // const handleDownload = () => {
 
+  //   const pdfLink = 'https://drive.google.com/file/d/1lFY3iTnxD-AN9WS1KaFHwD9LazPf7X8w/view?usp=sharing';
+  //   window.open(pdfLink, '_blank');
+  // };
+  const handleDownload = () => {
+    // Replace 'YOUR_GOOGLE_DRIVE_PDF_LINK' with the actual link from step 1
+    const pdfLink = 'https://drive.google.com/file/d/1lFY3iTnxD-AN9WS1KaFHwD9LazPf7X8w/view?usp=sharing';
+
+    // Create an invisible link element
+    const link = document.createElement('a');
+    link.href = pdfLink;
+    link.target = '_blank'; // Open in a new tab
+    link.download = 'psbr.pdf'; // Set the desired file name
+
+    // Trigger a click on the link
+    document.body.appendChild(link);
+    link.click();
+
+    // Remove the link from the document
+    document.body.removeChild(link);
+  };
   const { width } = useWindowSize();
   const threshold = 1000;
 
@@ -179,7 +200,8 @@ const MainNavbar = () => {
                 <button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#exampleModal">Request Quote</button>
               </li>
               <li>
-                <button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#exampleModal">Download Brochure</button>
+                <button className='btn btn-danger'> <Link href="src/assets/psbr.pdf" download="PSBR.pdf" className='text-white' target="_blank" 
+type="application/octet-stream">Download Brochure</Link></button>
               </li>
             </ul>
           </div>

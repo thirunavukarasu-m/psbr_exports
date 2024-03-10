@@ -3,30 +3,45 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background: rgb(2,0,36);
-    background: linear-gradient(273deg, rgba(2,0,36,1) 0%, rgba(207,207,207,1) 0%, rgba(231,231,231,1) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(273deg, rgba(2, 0, 36, 1) 0%, rgba(207, 207, 207, 1) 0%, rgba(231, 231, 231, 1) 100%);
 }
+
 .social-icons {
     gap: 0.7rem;
 }
-.social-icons > img {
+
+.social-icons>img {
     height: 20px;
     width: 20px;
     cursor: pointer;
 }
 
-.quick-links-footer-container > .quick-links-footer, .our-products-footer-container > .our-products-footer,
-.our-products-footer > .our-products-footer-part-one, .our-products-footer > .our-products-footer-part-two {
+.quick-links-footer-container>.quick-links-footer,
+.our-products-footer-container>.our-products-footer,
+.our-products-footer>.our-products-footer-part-one,
+.our-products-footer>.our-products-footer-part-two {
     gap: 0.7rem;
 }
-.footer-contact-info > .psbr-logo {
+
+.footer-contact-info>.psbr-logo {
     height: auto;
     max-width: 200px;
-  }
+}
 
+.quick-links-footer,.our-products-footer {
+    align-items: start;
+}
 
 @media (max-width: 762px) {
     .footer-container {
         gap: 2.5rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .quick-links-footer,.our-products-footer {
+        align-items: center;
     }
 }

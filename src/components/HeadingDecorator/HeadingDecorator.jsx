@@ -14,6 +14,9 @@ const HeadingDecorator = ({page}) => {
                 {page.type === 'normal' && (
                     <p className='m-0 font-20-px'>{page.text}</p>
                 )}
+                {page.type === 'about_founder' && (
+                    <p className='m-0 font-20-px text-white'>{page.text}</p>
+                )}
             <hr />
         </div>
     </>

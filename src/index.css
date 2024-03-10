@@ -34,8 +34,10 @@ a {
     color: orange;
   }
 }
-
-.pb-5 {
+.w-70 {
+  width: 70%;
+}
+ .pb-5 {
   padding-bottom: 150px!important;
 }
 
@@ -57,6 +59,13 @@ a {
 
 .bg-dark-blue {
   background-color: #8c8c8c;
+}
+.pointer {
+  color: black;
+  &:hover {
+    cursor: pointer;
+    color: orange;
+  }
 }
 
 @media (max-width: 762px) {

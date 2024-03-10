@@ -7,6 +7,17 @@ import { Link } from 'react-router-dom'
 import './Footer.css'
 
 const Footer = () => {
+  const handleContact = () => {
+    const emailAddress = 'psbrexports.in@gmail.com';
+    const subject = 'Subject of the email';
+    const body = 'Body of the email';
+
+    // Use encodeURIComponent to properly format the email address, subject, and body
+    const mailtoLink = `mailto:${encodeURIComponent(emailAddress)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open the user's default email client
+    window.location.href = mailtoLink;
+  };
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -32,14 +43,14 @@ const Footer = () => {
           <p className='m-0 fw-bold pt-2 text-dark'>Phone:</p>
           <p className='m-0 fw-bold pt-2 text-dark'>8610393469</p>
           <p className='m-0 fw-bold pt-2 text-dark'>9786251609</p>
-          <p className='m-0 fw-bold pt-2 text-dark text-center'>Email: Psbrexporters@gmail.com</p>
+          <p className='m-0 fw-bold pt-2 text-center pointer' onClick={handleContact}>Email: psbrexporters@gmail.com</p>
 
         </div>
         <div className="quick-links-footer-container mt-5">
           <h1 className='fw-bold blue-text font-25-px'>
             Quick Links
           </h1>
-          <div className="quick-links-footer d-flex flex-column align-items-start">
+          <div className="quick-links-footer d-flex flex-column">
             <Link to="/" onClick={scrollToTop} className='font-20-px'>Home</Link>
             <Link to="/about-us/" onClick={scrollToTop} className='font-20-px'>About Us</Link>
             <Link to="/contact-us/" onClick={scrollToTop} className='font-20-px'>Contact Us</Link>
@@ -50,7 +61,7 @@ const Footer = () => {
           <h1 className='fw-bold blue-text text-center font-25-px'>
             Our Products
           </h1>
-          <div className="our-products-footer d-flex flex-column justify-content-center align-items-start">
+          <div className="our-products-footer d-flex flex-column justify-content-center">
             <Link to="/products#Cumin" className='font-20-px'>Cumin</Link>
             <Link to="/products#Cloves" className='font-20-px'>Cloves</Link>
             <Link to="/products#Tamarind" className='font-20-px'>Tamarind</Link>
