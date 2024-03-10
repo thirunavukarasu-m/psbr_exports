@@ -39,9 +39,10 @@ const AboutUsPage = () => {
   const about_us = {
     img: site,
     heading: "PSBR Exports",
-    para_one: "PSBR Exports, founded in 2020 and based in Coimbatore, Tamil Nadu, India, is a company that sources, adds value to, and exports high-quality food products. To assure both quality and a competitive price, we procure raw materials directly from their source. Our skilled workforce’s knowledge and competence have allowed us to establish a reputation as one of the most dependable businesses in the food ingredient industry. In terms of Quality, Service, and Customer Satisfaction, our goal is to redefine market standards.",
-    para_two: "Through our in-house team of trained professionals, who have demonstrated their talents and expertise for more than 3 years, we ensure that our clients receive the best quality components from their various sources. From procurement through packing, every step of the process is carefully and strictly supervised by our skilled and licensed specialists. We also provide customization in flavour, quantity, and packaging for these items in order to satisfy the various needs of our clients."
+    para_one: "PSBR Exports is a trailblazer in the world of international trade, having started a journey driven by enthusiasm and conviction. It has become an important force for companies looking to source premium quality  products from the interior's of India. Our steadfast commitment to quality drives us to provide not only products but also unmatched services that serve as the foundation for our clients' success and expansion. At PSBR Exports, we craft a flawless experience for our clients, becoming more than just providers. We are success architects. With a wealth of experience in both international trade and finding premium products, our seasoned team of maestros takes on the task of transforming goals into reality. In the enormous field of international trade, we see ourselves as catalysts rather than just facilitators for our customers. From meticulously selecting the finest products to ensuring precision in delivery, our commitment resonates through every step, ensuring a partnership founded on trust and reliability.",
+    para_two: "As the conduit between aspiration and accomplishment, PSBR Exports is not just a business; it's a philosophy that redefines standards. Join us on this transformative journey, where innovation meets tradition, and together, we unleash boundless possibilities for growth and success."
   }
+  
   const about_the_founder = {
     img: human,
     heading: "About The Founder",
@@ -50,7 +51,7 @@ const AboutUsPage = () => {
   }
   return (
     <>
-      <m.div className="about-us-container mb-5"
+      <m.div className="about-us-container overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut", delay: 0.4 }}
@@ -79,7 +80,7 @@ const AboutUsPage = () => {
         )}
 
         <SingleProductInfo product={about_us} index={1} page={{ type: "normal", text: "We are" }} />
-        <div className="bg-dark-blue mt-5">
+        <div className="bg-dark-blue mt-5 overflow-hidden">
           <SingleProductInfo product={about_the_founder} page={"home"} index={2} />
 
           <div className="p-5 d-flex flex-column align-items-center">

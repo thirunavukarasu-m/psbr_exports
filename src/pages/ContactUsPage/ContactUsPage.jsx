@@ -53,7 +53,7 @@ const ContactUsPage = () => {
     }
   }, []);
   return (
-    <m.div className="contact-us-container mb-5"
+    <m.div className="contact-us-container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75, ease: "easeOut", delay: 0.4 }}

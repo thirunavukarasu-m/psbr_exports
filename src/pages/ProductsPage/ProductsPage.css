@@ -4,12 +4,21 @@
     background: url("../../assets/spices_common.jpg");
     filter: blur(0.5px);
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
 }
 
+.products-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(61, 61, 61, 0.5); /* Adjust the color and opacity as needed */
+  }
 .products-container {
     background-color: white;
 }
