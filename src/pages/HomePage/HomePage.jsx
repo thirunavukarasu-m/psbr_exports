@@ -14,7 +14,6 @@ import tamarind from '../../assets/products/tamarind.jpg'
 import turmaric from '../../assets/products/turmaric.jpg'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import { motion as m } from 'framer-motion'
-import BannerVideo from '../../components/BannerVideo/BannerVideo'
 import HeadingDecorator from '../../components/HeadingDecorator/HeadingDecorator'
 
 const HomePage = () => {
@@ -71,14 +70,11 @@ const HomePage = () => {
       >
         <div className="overflow-hidden">
           <Banner />
-          {/* <BannerVideo /> */}
         </div>
         <div className='pb-5'>
-          {/* <h1 className='text-center pt-5 orange-color text-white fs-1 fw-bold'> Who we are</h1> */}
           <SingleProductInfo product={psbr_exports} page={{ type: "normal", text: "Who we are" }} />
         </div>
         <div className="bg-light p-3 mt-5 pb-5">
-          {/* <h2 className='text-center pt-5 blue-text fs-1'> Explore </h2> */}
           <div className="d-flex justify-content-center">
             <HeadingDecorator page={{ type: "normal", text: "Explore" }} />
           </div>
