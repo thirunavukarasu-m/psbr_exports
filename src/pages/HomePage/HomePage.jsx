@@ -58,8 +58,8 @@ const HomePage = () => {
   const psbr_exports = {
     img: ship,
     heading: "PSBR Exports",
-    para_one: "PSBR Exports is one of the leading suppliers and exporters of quality products from India. We strive to provide our customers with superior products and reliable services that help them in their business growth and success. Our team of experienced specialists are committed to providing solutions that meet all of our customers’ needs, from sourcing the best products to delivering them on time and with committed accuracy.",
-    para_two: "With our in depth knowledge and expertise in the quality products sourcing and in the International trade, we are confident that we can make a difference and help our customers to grow and succeed."
+    para_one: "PSBR Exports is a trailblazer in the world of international trade, having started a journey driven by enthusiasm and conviction. It has become an important force for companies looking to source premium quality  products from the interior's of India. Our steadfast commitment to quality drives us to provide not only products but also unmatched services that serve as the foundation for our clients' success and expansion. At PSBR Exports, we craft a flawless experience for our clients, becoming more than just providers. We are success architects. With a wealth of experience in both international trade and finding premium products, our seasoned team of maestros takes on the task of transforming goals into reality. In the enormous field of international trade, we see ourselves as catalysts rather than just facilitators for our customers. From meticulously selecting the finest products to ensuring precision in delivery, our commitment resonates through every step, ensuring a partnership founded on trust and reliability.",
+    para_two: "As the conduit between aspiration and accomplishment, PSBR Exports is not just a business; it's a philosophy that redefines standards. Join us on this transformative journey, where innovation meets tradition, and together, we unleash boundless possibilities for growth and success."
   }
   return (
     <>
