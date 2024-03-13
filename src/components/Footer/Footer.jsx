@@ -71,6 +71,7 @@ const Footer = () => {
             <Link to="/products#Cardamom" className='font-20-px'>Cardamom</Link>
             <Link to="/products#chilli"className='font-20-px' >Red Chilli</Link>
             <Link to="/products#Pepper" className='font-20-px'>Black Pepper</Link>
+            <Link to="/products#Nutmeg" className='font-20-px'>Nutmeg</Link>
           </div>
         </div>
       </div>

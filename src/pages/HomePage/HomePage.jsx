@@ -13,6 +13,7 @@ import coriander from '../../assets/products/coriander.jpg'
 import tamarind from '../../assets/products/tamarind.jpg'
 import turmaric from '../../assets/products/turmaric.jpg'
 import ProductCard from '../../components/ProductCard/ProductCard'
+import nutmeg from '../../assets/products/nutmeg.jpg'
 import { motion as m } from 'framer-motion'
 import HeadingDecorator from '../../components/HeadingDecorator/HeadingDecorator'
 
@@ -53,6 +54,10 @@ const HomePage = () => {
     {
       heading: "Turmaric",
       img: turmaric
+    },
+    {
+      heading: "Nutmeg",
+      img: nutmeg
     },
   ]
   const psbr_exports = {
