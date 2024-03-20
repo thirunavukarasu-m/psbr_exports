@@ -48,5 +48,14 @@
     }
     .product-img > img {
         width: 300px;
+        height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .product-img > img {
+        
+        height: 450px;
     }
 }

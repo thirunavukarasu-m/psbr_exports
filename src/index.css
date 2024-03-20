@@ -18,7 +18,7 @@ body {
 }
 
 .blue-text {
-  color: #004A8D;
+
   font-size: 50px;
   font-weight: 600;
 }
@@ -85,6 +85,10 @@ a {
   .font-20-px {
     font-size: 15px;
   }
+  .blue-text {
+    font-size: 40px;
+  }
+  
 }
 
 .form-control {
