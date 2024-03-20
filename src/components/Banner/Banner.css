@@ -42,5 +42,8 @@
     .banner-container {
         padding-right: 0;
     }
+    .banner-container {
+      height: 60vh;
+    }
 }
 

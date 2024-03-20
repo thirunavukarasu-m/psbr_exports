@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     background: rgb(2, 0, 36);
+
     background: linear-gradient(273deg, rgba(2, 0, 36, 1) 0%, rgba(207, 207, 207, 1) 0%, rgba(231, 231, 231, 1) 100%);
 }
 
@@ -31,6 +32,14 @@
 
 .quick-links-footer,.our-products-footer {
     align-items: start;
+}
+
+.psbr-logo-social {
+  transition: all 0.1s ease; /* Smooth transition */
+}
+
+.psbr-logo-social:hover {
+    filter: invert(80%) sepia(38%) saturate(6200%) hue-rotate(359deg) brightness(102%) contrast(104%);
 }
 
 @media (max-width: 762px) {

@@ -31,18 +31,18 @@ const Footer = () => {
           <img src={logo} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' />
           <div className="d-flex justify-content-center align-items-center social-icons pb-3">
             <Link to={'https://www.facebook.com/profile.php?id=61555495640843&mibextid=ZbWKwL'} target="_blank" rel="noopener noreferrer">
-              <img src={facebook} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' height={25} width={25} />
+              <img src={facebook} alt="PSBR Exports logo" loading="lazy" className='psbr-logo-social' height={25} width={25} />
             </Link>
             <Link to={'https://x.com/psbrexports?t=mimBosrtQqRrbdqkjQiHrA&s=09'} target="_blank" rel="noopener noreferrer">
-              <img src={x} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' height={25} width={25} />
+              <img src={x} alt="PSBR Exports logo" loading="lazy" className='psbr-logo-social' height={25} width={25} />
             </Link>
             <Link to={'https://www.instagram.com/psbrexports?igsh=OGQ5ZDc2ODk2ZA=='} target="_blank" rel="noopener noreferrer">
-              <img src={instagram} alt="PSBR Exports logo" loading="lazy" className='psbr-logo' height={25} width={25} />
+              <img src={instagram} alt="PSBR Exports logo" loading="lazy" className='psbr-logo-social' height={25} width={25} />
             </Link>
           </div>
           <p className='m-0 fw-bold pt-2 text-dark'>Phone:</p>
-          <p className='m-0 fw-bold pt-2 text-dark'>8610393469</p>
-          <p className='m-0 fw-bold pt-2 text-dark'>9786251609</p>
+          <p className='m-0 fw-bold pt-2 text-dark'>+91 8610393469</p>
+          <p className='m-0 fw-bold pt-2 text-dark'>+91 9786251609</p>
           <p className='m-0 fw-bold pt-2 text-center pointer' onClick={handleContact}>Email: psbrexporters@gmail.com</p>
 
         </div>

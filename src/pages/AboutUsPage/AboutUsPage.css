@@ -20,7 +20,7 @@
 .mv-container {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .mv-content {
@@ -60,5 +60,11 @@
     transition: transform 0.3s ease-in-out;
     &:hover {
         transform: scale(1.03);
+    }
+}
+
+@media (max-width: 762px) {
+    .about-us-banner {
+        height: 60vh;
     }
 }

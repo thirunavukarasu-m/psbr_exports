@@ -97,15 +97,15 @@ const ContactUsPage = () => {
             <img src={email} alt="" height={30} width={30} />
             <div className="contact-content">
               <h4>Email:</h4>
-              <p className='text-dark'>Psbrexporters@gmail.com</p>
+              <p className='text-dark'>psbrexporters@gmail.com</p>
             </div>
           </div>
           <div className="contact-type">
             <img src={phone} alt="" height={30} width={30} />
             <div className="contact-content">
               <h4>Phone:</h4>
-              <p className='text-dark'>8610393469</p>
-              <p className='text-dark'>9786251609</p>
+              <p className='text-dark'>+91 8610393469</p>
+              <p className='text-dark'>+91 9786251609</p>
             </div>
           </div>
           <div className="contact-type">

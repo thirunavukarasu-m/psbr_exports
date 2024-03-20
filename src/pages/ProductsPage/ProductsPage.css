@@ -22,3 +22,9 @@
 .products-container {
     background-color: white;
 }
+
+@media (max-width: 762px) {
+    .products-banner {
+        height: 60vh;
+    }
+}

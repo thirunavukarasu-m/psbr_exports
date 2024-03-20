@@ -57,6 +57,6 @@
 
 @media (max-width: 762px) {
     .contact-us-banner {
-        /* background-position: bottom; */
+        height: 60vh;
     }
 }

@@ -37,6 +37,9 @@ a {
 .w-70 {
   width: 70%;
 }
+.w-72 {
+  width: 72%;
+}
  .pb-5 {
   padding-bottom: 150px!important;
 }
@@ -75,6 +78,12 @@ a {
 
   .font-80-px {
     font-size: 48px;
+  }
+  .w-72 {
+    width: 80%;
+  }
+  .font-20-px {
+    font-size: 15px;
   }
 }
 

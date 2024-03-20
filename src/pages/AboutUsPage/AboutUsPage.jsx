@@ -46,7 +46,7 @@ const AboutUsPage = () => {
   const about_the_founder = {
     img: human,
     heading: "About The Founder",
-    para_one: "Our Founder Mr. Vignesh Raj Jawahar, an Engineer by qualification and is a third generation entrepreneur, his roots are from the families business background and experience that spans from Agri products farming, produce, sourcing and distribution. With his rich experience in quality agro product sourcing he guides and leads the key decisions of the procurement process for International trade business.",
+    para_one: "Perarul Selvan and Balaji Ramanathan, the founders of PSBR Exports, both hail from a distinguished background in International Business. Their academic prowess and practical experience provide them with a robust foundation in the intricacies of international trade. With a deep understanding of export operations and international business dynamics, Perarul Selvan and Balaji Ramanathan are committed to leveraging their expertise to propel PSBR Exports to new heights in the global marketplace",
     para_two: "PSBR Exports is a trusted exporter of Agro, Agro Allied and Herbal products from India. Founded by experienced industry professionals, PSBR Exports specializes in exporting a wide range of products including fruits, vegetables, spices, cereals, nuts, and Herbal products to countries worldwide. With 3 generations of experience in the industry, we are committed to providing our customers with the highest quality of products and services with a team of dedicated, young, and energetic entrepreneurs. We strive to deliver the best in terms of product quality, customer service, and timely delivery."
   }
   return (
@@ -84,10 +84,8 @@ const AboutUsPage = () => {
           <SingleProductInfo product={about_the_founder} page={{ type: "about_founder", text: "Founder" }} index={2} />
 
           <div className="p-3 d-flex flex-column align-items-center">
-            <div className="w-70">
-              <p>
-                PSBR Exports’ main focus is on providing quality, consistency and reliability to our customers. Our team of passionate and energetic professional are committed to source and deliver the best products and services to our customers in a timely and cost-effective manner. Our commitment to quality and customer service has enabled us to establish long-term relationships with our clients and we strive to exceed their expectations with every shipment.
-              </p>
+            <div className="w-72">
+             
               <p>
                 As part of PSBR Exports the Herbal products division was established as AGAN HERBALS. At Agan Herbals, we believe that nature is the key to true beauty and health. We are committed to providing products that are 100% natural and herbal, free of harmful chemicals, and are dermatologically tested and safe to use. Our wide range of Hair Care, Skin Care, Health Care, and Oral Care products are made from the finest ingredients, to ensure our customers get the optimal health and beauty they deserve. We are passionate about helping people achieve their health and beauty goals, and make sure we provide the highest quality products and services that exceed customer expectations.
               </p>

@@ -52,7 +52,7 @@ const HomePage = () => {
       img: tamarind
     },
     {
-      heading: "Turmaric",
+      heading: "Turmeric",
       img: turmaric
     },
     {

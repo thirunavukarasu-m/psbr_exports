@@ -2,31 +2,51 @@
     margin-top: 0px;
 }
 
-.whatsApp > a > img {
+/* .whatsApp > a > img {
     height: 75px;
     width: 75px;
-}
+} */
 
 .whatsApp {
+    width: 20%;
     position: fixed;
     bottom: 1rem; /* Adjust as needed */
     right: 1rem; /* Adjust as needed */
     animation: bounce 0.5s infinite alternate;
+    float: left;
 }
 
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    animation: bounce 0.5s infinite alternate;
+  }
+  
+  .whatsapp-logo {
+    /* width: 70px; */
+    /* height: auto; */
+  }
 @keyframes bounce {
     0% {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-10px); /* Adjust the bounce height as needed */
+        transform: translateY(-10px);
     }
 }
 
 
-@media (max-width: 762px) {
+/* @media (max-width: 762px) {
     .whatsApp> a > img{
         height: 55px;
         width: 55px;
     }
-}
+} */
+
+@media screen and (max-width: 480px) {
+    .whatsapp-logo {
+      /* width: 40px;  */
+    }
+  }
