@@ -76,10 +76,10 @@ const HomePage = () => {
         <div className="overflow-hidden">
           <Banner />
         </div>
-        <div className='pb-5'>
+        <div className='pb-2'>
           <SingleProductInfo product={psbr_exports} page={{ type: "normal", text: "Who we are" }} />
         </div>
-        <div className="bg-light p-3 mt-5 pb-5">
+        <div className="bg-light p-3">
           <div className="d-flex justify-content-center">
             <HeadingDecorator page={{ type: "normal", text: "Explore" }} />
           </div>
