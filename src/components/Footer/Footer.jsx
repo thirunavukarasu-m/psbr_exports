@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "../../assets/psbr_bg_removed.png"
 import facebook from "../../assets/social-icons/facebook.png"
-import instagram from "../../assets/social-icons/instagram.png"
+import instagram from "../../assets/social-icons/instagram1.png"
 import x from "../../assets/social-icons/x.png"
 import { Link } from 'react-router-dom'
 import './Footer.css'

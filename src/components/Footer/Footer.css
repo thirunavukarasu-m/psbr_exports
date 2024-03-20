@@ -43,11 +43,6 @@
   }
   
   
-  
-  .instagram-icon {
-    filter: invert(14%) sepia(45%) saturate(5670%) hue-rotate(297deg) brightness(85%) contrast(96%);
-  }
-
 @media (max-width: 762px) {
     .footer-container {
         gap: 2.5rem;
