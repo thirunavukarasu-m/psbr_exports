@@ -43,7 +43,9 @@ a {
  .pb-5 {
   padding-bottom: 150px!important;
 }
-
+.font-15-px {
+  font-size: 15px;
+}
 .font-20-px {
   font-size: 20px;
 }

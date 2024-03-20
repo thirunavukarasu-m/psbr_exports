@@ -76,6 +76,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="copyrights bg-light d-flex justify-content-center align-items-center">
+        <p className='text-dark font-15-px text-center m-0 p-2'>Copyright © 2024 PSBR Exports.</p>
+      </div>
     </>
   )
 }
