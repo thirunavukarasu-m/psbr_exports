@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     background: rgb(2, 0, 36);
-
     background: linear-gradient(273deg, rgba(2, 0, 36, 1) 0%, rgba(207, 207, 207, 1) 0%, rgba(231, 231, 231, 1) 100%);
 }
 
@@ -38,9 +37,16 @@
   transition: all 0.1s ease; /* Smooth transition */
 }
 
-.psbr-logo-social:hover {
-    filter: invert(80%) sepia(38%) saturate(6200%) hue-rotate(359deg) brightness(102%) contrast(104%);
-}
+
+.facebook-icon {
+    filter: invert(40%) sepia(20%) saturate(6868%) hue-rotate(200deg) brightness(93%) contrast(104%);
+  }
+  
+  
+  
+  .instagram-icon {
+    filter: invert(14%) sepia(45%) saturate(5670%) hue-rotate(297deg) brightness(85%) contrast(96%);
+  }
 
 @media (max-width: 762px) {
     .footer-container {
