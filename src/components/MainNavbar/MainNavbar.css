@@ -37,7 +37,7 @@
 .navbar-nav {
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.3rem;
 }
 
 
@@ -46,8 +46,15 @@
   .nav-link {
     color: black;
   }
-  ul {
-    padding: 20px;
+  li {
+    padding: 5px;
   }
 } 
 
+
+@media (max-width: 760px) {
+  .divider-line {
+    display: block;
+    border: 0.2px solid rgb(179, 179, 179);
+  }
+} 

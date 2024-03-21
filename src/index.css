@@ -90,7 +90,10 @@ a {
   .blue-text {
     font-size: 40px;
   }
-  
+  .psbr-logo {
+
+    max-width: 140px;
+  }
 }
 
 .form-control {
