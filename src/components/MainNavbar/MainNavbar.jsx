@@ -5,7 +5,6 @@ import logo from "../../assets/psbr_bg_removed.png";
 import hamburger from "../../assets/menu.png";
 import ModalPopup from '../ModalPopup/ModalPopup';
 import useWindowSize from '../../utils/useWindowSize';
-import PdfDownloader from '../PDFDownloader/PDFDownloader';
 
 const MainNavbar = () => {
   const [activeItem, setActiveItem] = useState(null);
@@ -13,7 +12,15 @@ const MainNavbar = () => {
   const [visible, setVisible] = useState(true);
   const [visibleBgLight, setVisibleBgLight] = useState(false);
 
-
+  const onButtonClick = () => {
+    const pdfUrl = "PSBR_Exports.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "PSBR Exports.pdf"; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -29,7 +36,6 @@ const MainNavbar = () => {
     };
   }, [prevScrollPos]);
 
-  
   const { width } = useWindowSize();
   const threshold = 1000;
 
@@ -53,8 +59,8 @@ const MainNavbar = () => {
       <nav className={`navbar navbar-expand-md fixed-top ${visible ? visibleBgLight ? "bg-light" : "" : visibleBgLight ? "bg-light hidden" : "hidden"}`}>
         <div className="container-fluid">
           {width < threshold && <Link onClick={scrollToTop} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" className="psbr-logo" height={150} width={198} /></Link>}
-          <button className={navbarState ==="collapse navbar-collapse" ?"navbar-toggler bg-light" : "navbar-toggler" } type="button" onClick={()=>{
-            if(navbarState === "collapse navbar-collapse") {
+          <button className={navbarState === "collapse navbar-collapse" ? "navbar-toggler bg-light" : "navbar-toggler"} type="button" onClick={() => {
+            if (navbarState === "collapse navbar-collapse") {
               setNavbarState("collapse navbar-collapse show bg-light text-dark")
             } else {
               setNavbarState("collapse navbar-collapse")
@@ -68,40 +74,39 @@ const MainNavbar = () => {
                 <li>
                   <Link onClick={() => handleItemClick('home')} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" className="psbr-logo" height={200} width={208} /></Link>
                 </li>
-                
+
               )}
               <li>
-                <Link onClick={() => handleItemClick('home')} className={activeItem === 'home' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/"}>Home</Link>
-                
+                <Link onClick={() => handleItemClick('home')} className={activeItem === 'home' ? 'nav-link active' : `${visibleBgLight ? "text-dark" : ""} nav-link`} aria-current="page" to={"/"}>Home</Link>
+
               </li>
               <div className="divider-line w-100"></div>
               <li>
-                <Link onClick={() => handleItemClick('products')} className={activeItem === 'products' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/products/"}>Products</Link>
-                
+                <Link onClick={() => handleItemClick('products')} className={activeItem === 'products' ? 'nav-link active' : `${visibleBgLight ? "text-dark" : ""} nav-link`} aria-current="page" to={"/products/"}>Products</Link>
+
               </li>
               <div className="divider-line w-100"></div>
               <li>
-                <Link onClick={() => handleItemClick('about')} className={activeItem === 'about' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/about-us/"}>About Us</Link>
-                
+                <Link onClick={() => handleItemClick('about')} className={activeItem === 'about' ? 'nav-link active' : `${visibleBgLight ? "text-dark" : ""} nav-link`} aria-current="page" to={"/about-us/"}>About Us</Link>
+
               </li>
               <div className="divider-line w-100"></div>
               <li>
-                <Link onClick={() => handleItemClick('contact')} className={activeItem === 'contact' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/contact-us/"}>Contact Us</Link>
-                
+                <Link onClick={() => handleItemClick('contact')} className={activeItem === 'contact' ? 'nav-link active' : `${visibleBgLight ? "text-dark" : ""} nav-link`} aria-current="page" to={"/contact-us/"}>Contact Us</Link>
+
               </li>
               <div className="divider-line w-100"></div>
               <li>
                 <button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#exampleModal">Request Quote</button>
               </li>
-              {/* <li>
-                <button className='btn btn-danger'> <Link href="src/assets/PSBR_Exports.pdf" download="PSBR.pdf" className='text-white' target="_blank" 
-type="application/octet-stream">Download Brochure</Link></button>
-              </li> */}
-              {/* <li>
-                <button className='btn btn-danger'> <Link href={process.env.PUBLIC_URL + "/assets/PSBR_Exports.pdf"} download="PSBR.pdf" className='text-white' target="_blank" 
-type="application/octet-stream">Download Brochure</Link></button>
-              </li> */}
-              <PdfDownloader/>
+              <li>
+               
+                  <button className='btn btn-danger text-white' onClick={()=>{
+                    onButtonClick()
+                  }} >Download Brochure</button>
+
+  
+              </li>    
             </ul>
           </div>
         </div>
