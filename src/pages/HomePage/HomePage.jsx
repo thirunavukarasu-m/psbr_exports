@@ -76,7 +76,7 @@ const HomePage = () => {
         <div className="overflow-hidden">
           <Banner />
         </div>
-        <div className="d-flex justify-content-center pt-2">
+        <div className="d-flex justify-content-center pt-4">
             <HeadingDecorator page={{ type: "normal", text: "Who we are" }} />
           </div>
         <div className='pb-2'>
