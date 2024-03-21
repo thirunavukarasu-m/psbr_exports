@@ -1,5 +1,6 @@
 .heading-decorator {
     gap: 0.5rem;
+    justify-content: start;
     hr {
         width: 30px;
     }
@@ -8,5 +9,10 @@
         font-weight: 200;
     }
     
+}
 
+@media (max-width: 550px) {
+    .heading-decorator {
+        justify-content: center;
+    }
 }
