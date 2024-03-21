@@ -127,7 +127,7 @@ const AboutUsPage = () => {
         </div>
         <div className="why-choose-us-container p-5 mt-5 bg-dark">
         <div className="w-100 d-flex justify-content-center">
-            <HeadingDecorator page={{ type: "normal", text: "WE STAND OUT FROM THE REST" }} />
+            <HeadingDecorator page={{ type: "normal", text: "We stand out From the rest" }} />
           </div>
           <h1 className='text-dark fw-bold text-center text-white'> Why Choose Us</h1>
           <div className="why-choose-us-cards d-flex mt-5 mb-5">
