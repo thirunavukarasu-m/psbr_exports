@@ -66,27 +66,33 @@ const MainNavbar = () => {
               {width > threshold && (
                 <li>
                   <Link onClick={() => handleItemClick('home')} to={"/"}><img src={logo} alt="PSBR Exports logo" loading="lazy" className="psbr-logo" height={200} width={208} /></Link>
-                </li>                
+                </li>
+                
               )}
               <li>
                 <Link onClick={() => handleItemClick('home')} className={activeItem === 'home' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/"}>Home</Link>
+                
               </li>
               <div className="divider-line w-100"></div>
               <li>
-                <Link onClick={() => handleItemClick('products')} className={activeItem === 'products' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/products/"}>Products</Link>                
+                <Link onClick={() => handleItemClick('products')} className={activeItem === 'products' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/products/"}>Products</Link>
+                
               </li>
               <div className="divider-line w-100"></div>
               <li>
-                <Link onClick={() => handleItemClick('about')} className={activeItem === 'about' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/about-us/"}>About Us</Link>               
+                <Link onClick={() => handleItemClick('about')} className={activeItem === 'about' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/about-us/"}>About Us</Link>
+                
               </li>
               <div className="divider-line w-100"></div>
               <li>
-                <Link onClick={() => handleItemClick('contact')} className={activeItem === 'contact' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/contact-us/"}>Contact Us</Link>                
+                <Link onClick={() => handleItemClick('contact')} className={activeItem === 'contact' ? 'nav-link active' : `${visibleBgLight ? "text-dark":""} nav-link`} aria-current="page" to={"/contact-us/"}>Contact Us</Link>
+                
               </li>
               <div className="divider-line w-100"></div>
               <li>
                 <button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#exampleModal">Request Quote</button>
               </li>
+              <div className="divider-line w-100"></div>
               <li>
                 <button className='btn btn-danger'> <Link href="src/assets/psbr.pdf" download="PSBR.pdf" className='text-white' target="_blank" 
 type="application/octet-stream">Download Brochure</Link></button>
