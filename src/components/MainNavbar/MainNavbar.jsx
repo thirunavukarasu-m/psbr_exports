@@ -92,7 +92,6 @@ const MainNavbar = () => {
               <li>
                 <button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#exampleModal">Request Quote</button>
               </li>
-              <div className="divider-line w-100"></div>
               <li>
                 <button className='btn btn-danger'> <Link href="src/assets/psbr.pdf" download="PSBR.pdf" className='text-white' target="_blank" 
 type="application/octet-stream">Download Brochure</Link></button>
