@@ -1,4 +1,4 @@
-import axios from "axios";
+import emailjs from 'emailjs-com';
 import toast from "react-hot-toast";
 
 
@@ -11,29 +11,27 @@ const emailTemplate = (data) => `
   Message : ${data.message}
 `;
 
-export const handleSendEmail = async (values, redirect, formik = false) => {
-  const psbr_email = "psbrexports.in@gmail.com"
-  try {
-    const apiUrl = 'https://psbr-exports-email.onrender.com/send-email';
-    const psbr_payload = {
-      to: psbr_email,
-      subject: `User Enquiry`,
-      message: emailTemplate(values),
-    };
-    const psbr_promise = await axios.post(apiUrl, psbr_payload);
-    if (psbr_promise.status === 200) {
-      toast.success('Email sent successfull!')
-      if (redirect) {
-        setTimeout(() => {
-          window.location.href = '/';
-        }, 1000)
-      } else {
-        formik.resetForm()
-      }
-    } else {
-      toast.error('Try again after sometime.')
-    }
-  } catch (error) {
-    console.error('Error sending email:', error);
-  }
+export const handleSendEmail = async (values, redirect, formik = false) => {  
+      emailjs.send("service_puz2r3k","template_dw93vk7",{
+        name: values.name,
+        email: values.email,
+        message: emailTemplate(values),
+        },'3p9sqrNbko9ZqRROp').then(
+          () => {
+            toast.success('Email sent successfull!')
+            if (redirect) {
+              setTimeout(() => {
+                window.location.href = '/';
+              }, 1000)
+            } else {
+              formik.resetForm()
+            }
+          },
+          (error) => {
+            toast.error('Please reach out through mobile.')
+            setTimeout(() => {
+              window.location.href = '/';
+            }, 1000)
+          },
+        );
 };

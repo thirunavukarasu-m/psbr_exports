@@ -12,7 +12,6 @@ import whatsApp from './assets/whatsapp-logo.png'
 
 function App() {
   const handleClick = () => {
-    // Replace 'your_phone_number' with your actual phone number
     window.open('https://wa.me/message/AUKBGAFITFRAJ1?src=qr', '_blank');
   };
   return (
@@ -38,13 +37,9 @@ function App() {
                 path="/contact-us/"
                 element={<PageTransition><ContactUsPage /></PageTransition>}
               />
+              
             </Routes>
           </AnimatePresence>
-          {/* <div className="fixed-bottom p-3 d-flex justify-content-end whatsApp">
-            <Link to={'https://wa.me/message/AUKBGAFITFRAJ1?src=qr'} target="_blank" rel="noopener noreferrer">
-              <img src={whatsApp} alt="whatsApp logo" />
-            </Link>
-          </div> */}
           <div className="whatsapp-button" onClick={handleClick}>
             <img
               src={whatsApp}
