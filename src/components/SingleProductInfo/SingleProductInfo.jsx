@@ -32,7 +32,7 @@ const SingleProductInfo = ({ product, index, page }) => {
 
     return (
         <>
-            <m.div className={index % 2 !== 0 ? "single-product-view-container pt-5" : "single-product-view-container pt-5 flex-row-reverse"}
+            <m.div className={index % 2 !== 0 ? "single-product-view-container pt-3" : "single-product-view-container pt-3 flex-row-reverse"}
                 initial={page.type ===  "about_founder" ? { x: "100%" } :{ y: "50%" }}
                 whileInView={page.type ===  "about_founder" ? { opacity: 1, x: "0%" } : { opacity: 1, y: "0%" }}
                 transition={{ duration: 0.4, ease: "easeIn", delay: 0.25 }}

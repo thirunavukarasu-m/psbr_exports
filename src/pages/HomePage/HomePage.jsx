@@ -76,8 +76,12 @@ const HomePage = () => {
         <div className="overflow-hidden">
           <Banner />
         </div>
+        <div className="d-flex justify-content-center pt-2">
+            <HeadingDecorator page={{ type: "normal", text: "Who we are" }} />
+          </div>
         <div className='pb-2'>
-          <SingleProductInfo product={psbr_exports} page={{ type: "normal", text: "Who we are" }} />
+        {/* <HeadingDecorator page={{ type: "normal", text: "Who we are" }} /> */}
+          <SingleProductInfo product={psbr_exports} page={{ type: "nothing", text: "" }} />
         </div>
         <div className="bg-light p-3">
           <div className="d-flex justify-content-center">

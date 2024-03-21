@@ -5,20 +5,22 @@ import spicesPng from '../../assets/spices.png'
 const HeadingDecorator = ({page}) => {
   return (
     <>
-        <div className="heading-decorator d-flex align-items-center">
-            <hr />
-                {page.type === 'spices' && (
-                    <img src={spicesPng} alt="" srcset="" height={40} width={40}/>
-                )}
-                
-                {page.type === 'normal' && (
-                    <p className='m-0 font-20-px'>{page.text}</p>
-                )}
-                {page.type === 'about_founder' && (
-                    <p className='m-0 font-20-px text-white'>{page.text}</p>
-                )}
-            <hr />
-        </div>
+       {page.type !== 'nothing' && (
+         <div className="heading-decorator d-flex align-items-center">
+         <hr />
+             {page.type === 'spices' && (
+                 <img src={spicesPng} alt="" srcset="" height={40} width={40}/>
+             )}
+             
+             {page.type === 'normal' && (
+                 <p className='m-0 font-20-px'>{page.text}</p>
+             )}
+             {page.type === 'about_founder' && (
+                 <p className='m-0 font-20-px text-white'>{page.text}</p>
+             )}
+         <hr />
+     </div>
+       )}
     </>
   )
 }
