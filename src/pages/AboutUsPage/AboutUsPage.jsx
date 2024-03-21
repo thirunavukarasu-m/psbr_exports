@@ -47,7 +47,7 @@ const AboutUsPage = () => {
     img: human,
     heading: "About The Founder",
     para_one: "Perarul Selvan and Balaji Ramanathan, the founders of PSBR Exports, both hail from a distinguished background in International Business. Their academic prowess and practical experience provide them with a robust foundation in the intricacies of international trade. With a deep understanding of export operations and international business dynamics, Perarul Selvan and Balaji Ramanathan are committed to leveraging their expertise to propel PSBR Exports to new heights in the global marketplace",
-    para_two: "PSBR Exports is a trusted exporter of Agro, Agro Allied and Herbal products from India. Founded by experienced industry professionals, PSBR Exports specializes in exporting a wide range of products including fruits, vegetables, spices, cereals, nuts, and Herbal products to countries worldwide. With 3 generations of experience in the industry, we are committed to providing our customers with the highest quality of products and services with a team of dedicated, young, and energetic entrepreneurs. We strive to deliver the best in terms of product quality, customer service, and timely delivery."
+    para_two: "PSBR Exports is a trusted exporter of Agro, Agro Allied and Spices from India. Founded by experienced industry professionals, PSBR Exports specializes in exporting a wide range of products including fruits, vegetables, spices, cereals and nuts to countries worldwide. We strive to deliver the best in terms of product quality, customer service, and timely delivery."
   }
   return (
     <>
@@ -82,8 +82,6 @@ const AboutUsPage = () => {
         <SingleProductInfo product={about_us} index={1} page={{ type: "normal", text: "We are" }} />
         <div className="bg-dark-blue mt-5 overflow-hidden">
           <SingleProductInfo product={about_the_founder} page={{ type: "about_founder", text: "Founder" }} index={2} />
-
-          
         </div>
         <div className="mission-and-vision p-5">
           <div className="w-100 d-flex justify-content-center">
