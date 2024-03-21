@@ -5,6 +5,7 @@ import logo from "../../assets/psbr_bg_removed.png";
 import hamburger from "../../assets/menu.png";
 import ModalPopup from '../ModalPopup/ModalPopup';
 import useWindowSize from '../../utils/useWindowSize';
+import PdfDownloader from '../PDFDownloader/PDFDownloader';
 
 const MainNavbar = () => {
   const [activeItem, setActiveItem] = useState(null);
@@ -92,10 +93,15 @@ const MainNavbar = () => {
               <li>
                 <button className='btn btn-danger' data-bs-toggle="modal" data-bs-target="#exampleModal">Request Quote</button>
               </li>
-              <li>
-                <button className='btn btn-danger'> <Link href="src/assets/psbr.pdf" download="PSBR.pdf" className='text-white' target="_blank" 
+              {/* <li>
+                <button className='btn btn-danger'> <Link href="src/assets/PSBR_Exports.pdf" download="PSBR.pdf" className='text-white' target="_blank" 
 type="application/octet-stream">Download Brochure</Link></button>
-              </li>
+              </li> */}
+              {/* <li>
+                <button className='btn btn-danger'> <Link href={process.env.PUBLIC_URL + "/assets/PSBR_Exports.pdf"} download="PSBR.pdf" className='text-white' target="_blank" 
+type="application/octet-stream">Download Brochure</Link></button>
+              </li> */}
+              <PdfDownloader/>
             </ul>
           </div>
         </div>
