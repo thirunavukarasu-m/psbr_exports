@@ -83,14 +83,7 @@ const AboutUsPage = () => {
         <div className="bg-dark-blue mt-5 overflow-hidden">
           <SingleProductInfo product={about_the_founder} page={{ type: "about_founder", text: "Founder" }} index={2} />
 
-          <div className="p-3 d-flex flex-column align-items-center">
-            <div className="w-72">
-             
-              <p>
-                As part of PSBR Exports the Herbal products division was established as AGAN HERBALS. At Agan Herbals, we believe that nature is the key to true beauty and health. We are committed to providing products that are 100% natural and herbal, free of harmful chemicals, and are dermatologically tested and safe to use. Our wide range of Hair Care, Skin Care, Health Care, and Oral Care products are made from the finest ingredients, to ensure our customers get the optimal health and beauty they deserve. We are passionate about helping people achieve their health and beauty goals, and make sure we provide the highest quality products and services that exceed customer expectations.
-              </p>
-            </div>
-          </div>
+          
         </div>
         <div className="mission-and-vision p-5">
           <div className="w-100 d-flex justify-content-center">
